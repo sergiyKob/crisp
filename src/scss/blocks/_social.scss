@@ -1,0 +1,35 @@
+.social {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        @include mq("desktop") {
+            gap: 5px;
+        }
+    }
+    &__item {
+    }
+    &__link {
+        @include flex-v-center;
+        color: var(--gray1-color);
+        gap: 15px;
+        @include hover {
+            .social__link-icon {
+                stroke: transparent;
+            }
+        }
+        @include mq("desktop") {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        @include mq("tablet") {
+        }
+        @include mq("tablet-sm") {
+        }
+        @include mq("mobile") {
+        }
+    }
+    &__link-icon {
+        fill: var(--light-color);
+    }
+}

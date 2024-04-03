@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main | Crisp</title>
+    <link rel="icon" href="img/logo.svg">
+    <link rel="preload" href="fonts/Oswald-Bold.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/Oswald-Light.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/Oswald-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/Oswald-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/Oswald-SemiBold.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/Roboto-Light.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="preload" href="fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="body">
+    <div class="wrapper">
+        <header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <button class="burger" type="button">
+                <span class="burger__line"></span>
+                <span class="sr-only">burger menu</span>
+            </button>
+            <a class="header__logo logo" href="#">
+                <img class="logo__img" src="img/logo.svg" width="94" height="44" alt="logo">
+            </a>
+            <div class="header__center">
+                <div class="btns-mobile full-width">
+                    <a class="btns-mobile__btn btn btn--secondary" href="/create-account.html">
+                        create an account
+                    </a>
+                    <button class="btns-mobile__btn btn btn--secondary btn--sign-in" type="button"
+                            data-popup-btn="popup-1">
+                        sign in
+                    </button>
+                </div>
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link link" href="/">home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link link" href="/catalog.html">shop</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link link" href="/article.html">blog</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link link" href="#">sale</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link link" href="#">contacts us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__search">
+                    <button class="header__search-btn link" type="button" data-popup-btn="popup-search">
+                        <svg class="header__icon" width="16" height="16">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                        search
+                    </button>
+                    <form id="popup-search" class="form-search" data-popup>
+                        <div class="form-search__inner">
+                            <label class="form-search__label">
+                                <svg class="form-search__icon" width="24" height="24">
+                                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                                </svg>
+                                <input class="form-search__input" type="search"
+                                       placeholder="Angels malu zip jeans slim black" required>
+                            </label>
+                            <button class="form-search__btn btn btn--secondary" type="submit">
+                                find
+                            </button>
+                            <button class="form-search__close popup__close" type="button" data-popup-close>
+                                <svg class="popup__close-icon" width="20" height="20">
+                                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div class="header__right">
+                <div class="header__user-account">
+                    <button class="header__btn link" type="button" data-popup-btn="popup-1">sign in</button>
+                    <a class="header__btn link" href="/create-account.html">create an account</a>
+                </div>
+                <a class="header__wishlist link" href="/wishlist.html" title="wishlist">
+                    <svg class="header__icon" width="20" height="18" aria-hidden="true" aria-label="go to wishlist">
+                        <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                </a>
+                <button class="header__cart link" type="button" title="cart" data-popup-btn="popup-2">
+                    <svg class="header__cart-icon" width="18" height="20" aria-hidden="true" aria-label="go to cart">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
+                    </svg>
+                    <span class="header__cart-qty">
+                        <span>0</span>
+                        <span class="header__cart-text">item(s)</span>
+                    </span>
+                    <span class="header__cart-price">
+                        <span>0</span>
+                        eur
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div id="popup-1" class="popup" data-popup>
+    <div class="popup__inner">
+        <button class="popup__close flex-center" data-popup-close aria-label="close" title="close">
+            <svg class="popup__close-icon" width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+        </button>
+        <div class="sign-in">
+            <h3 class="sign-in__title title-sm">
+                login your account
+            </h3>
+            <form class="sign-in__form form">
+                <div class="sign-in__inputs">
+                    <div class="sign-in__row">
+                        <label class="form__label">
+                            <input class="form__input" type="email" placeholder="daisy.watson@example.com" required>
+                        </label>
+                    </div>
+                    <div class="sign-in__row">
+                        <label class="form__label">
+                            <input class="form__input" type="password" placeholder="Password" required>
+                        </label>
+                    </div>
+                    <div class="sign-in__aggree">
+                        <label class="checkbox">
+                            <input class="checkbox__input checkbox-hidden" type="checkbox">
+                            <span class="checkbox__modified"></span>
+                            By usign this form you agree with the storage and handling of your data by this
+                            website.
+                        </label>
+                    </div>
+                </div>
+                <div class="sign-in__buttons">
+                    <button class="sign-in__btn btn btn--secondary" type="submit">sign in</button>
+                    <a class="btn btn--primary-2" href="/create-account.html">create an account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+        <div id="popup-2" class="popup" data-popup>
+    <div class="popup__inner">
+        <button class="popup__close flex-center" data-popup-close aria-label="close" title="close">
+            <svg class="popup__close-icon" width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+        </button>
+        <div class="mini-cart">
+            <ul class="mini-cart__list hidden-scrollbar custom-scrollbar ">
+            </ul>
+            <div class="mini-cart__bottom">
+                <div class="mini-cart__subtotal">
+                    Cart Subtotal:
+                    <div class="mini-cart__price">
+                        <span>0</span>
+                        EUR
+                    </div>
+                </div>
+                <div class="mini-cart__buttons">
+                    <a class="mini-cart__btn btn btn--secondary" href="#">View and edit cart</a>
+                    <a class="mini-cart__btn btn btn--primary-2" href="#">go to checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</header>
+        <div class="main">
+            <section class="main-hero">
+    <h1 class="sr-only">Online store of branded clothes - Crisp</h1>
+    <div class="main-hero__container">
+        <div class="swiper main-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide main-slider__slide"
+                     style="background-image: url('img/main-slider/slide-bg.jpg');">
+                    <div class="main-slider__slide-inner">
+                        <div class="main-slider__content lines-decor">
+                            <h2 class="main-slider__title">
+                                Summer sale get <span>30% off</span> on all dress.
+                            </h2>
+                            <a class="btn btn--primary" href="#">shop now</a>
+                        </div>
+                        <div class="main-slider__images">
+                            <div class="main-slider__img1">
+                                <img src="img/main-slider/01.jpg" width="416" height="623" alt="a girl in a black dress">
+                            </div>
+                            <div class="main-slider__img2">
+                                <img src="img/main-slider/02.jpg" width="474" height="709" alt="a girl in a colored dress">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide main-slider__slide"
+                     style="background-image: url('img/main-slider/slide-bg.jpg');">
+                    <div class="main-slider__slide-inner">
+                        <div class="main-slider__content lines-decor">
+                            <h2 class="main-slider__title">
+                                Summer sale get <span>30% off</span> on all dress.
+                            </h2>
+                            <a class="btn btn--primary" href="#">shop now</a>
+                        </div>
+                        <div class="main-slider__images">
+                            <div class="main-slider__img1">
+                                <img src="img/main-slider/01.jpg" width="416" height="623" alt="a girl in a black dress">
+                            </div>
+                            <div class="main-slider__img2">
+                                <img src="img/main-slider/02.jpg" width="474" height="709" alt="a girl in a colored dress">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide main-slider__slide"
+                     style="background-image: url('img/main-slider/slide-bg.jpg');">
+                    <div class="main-slider__slide-inner">
+                        <div class="main-slider__content lines-decor">
+                            <h2 class="main-slider__title">
+                                Summer sale get <span>30% off</span> on all dress.
+                            </h2>
+                            <a class="btn btn--primary" href="#">shop now</a>
+                        </div>
+                        <div class="main-slider__images">
+                            <div class="main-slider__img1">
+                                <img src="img/main-slider/01.jpg" width="416" height="623" alt="a girl in a black dress">
+                            </div>
+                            <div class="main-slider__img2">
+                                <img src="img/main-slider/02.jpg" width="474" height="709" alt="a girl in a colored dress">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide main-slider__slide"
+                     style="background-image: url('img/main-slider/slide-bg.jpg');">
+                    <div class="main-slider__slide-inner">
+                        <div class="main-slider__content lines-decor">
+                            <h2 class="main-slider__title">
+                                Summer sale get <span>30% off</span> on all dress.
+                            </h2>
+                            <a class="btn btn--primary" href="#">shop now</a>
+                        </div>
+                        <div class="main-slider__images">
+                            <div class="main-slider__img1">
+                                <img src="img/main-slider/01.jpg" width="416" height="623" alt="a girl in a black dress">
+                            </div>
+                            <div class="main-slider__img2">
+                                <img src="img/main-slider/02.jpg" width="474" height="709" alt="a girl in a colored dress">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide main-slider__slide"
+                     style="background-image: url('img/main-slider/slide-bg.jpg');">
+                    <div class="main-slider__slide-inner">
+                        <div class="main-slider__content lines-decor">
+                            <h2 class="main-slider__title">
+                                Summer sale get <span>30% off</span> on all dress.
+                            </h2>
+                            <a class="btn btn--primary" href="#">shop now</a>
+                        </div>
+                        <div class="main-slider__images">
+                            <div class="main-slider__img1">
+                                <img src="img/main-slider/01.jpg" width="416" height="623" alt="a girl in a black dress">
+                            </div>
+                            <div class="main-slider__img2">
+                                <img src="img/main-slider/02.jpg" width="474" height="709" alt="a girl in a colored dress">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+
+            <div class="main-slider__prev">
+                <svg class="main-slider__prev-icon" width="20" height="25" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
+                </svg>
+            </div>
+            <div class="main-slider__next">
+                <svg class="main-slider__next-icon" width="20" height="25" aria-hidden="true">
+                    <use xlink:href="img/sprite.svg#arrow-left"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="brands">
+    <div class="container">
+        <h2 class="brands__title title-sm">
+            chose your brand
+        </h2>
+        <ul class="brands__list">
+            <li class="brands__item">
+                <a class="brands__link" href="#">
+                    <svg class="brands__icon" width="142" height="22" aria-label="chanel">
+                        <use xlink:href="img/sprite.svg#icon-chanel"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="brands__item">
+                <a class="brands__link" href="#">
+                    <svg class="brands__icon" width="169" height="22" aria-label="burberry">
+                        <use xlink:href="img/sprite.svg#icon-burberry"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="brands__item">
+                <a class="brands__link" href="#">
+                    <svg class="brands__icon" width="89" height="35" aria-label="dior">
+                        <use xlink:href="img/sprite.svg#icon-dior"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="brands__item">
+                <a class="brands__link" href="#">
+                    <svg class="brands__icon" width="101" height="28" aria-label="fendi">
+                        <use xlink:href="img/sprite.svg#icon-fendi"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="brands__item">
+                <a class="brands__link" href="#">
+                    <svg class="brands__icon" width="135" height="27" aria-label="versace">
+                        <use xlink:href="img/sprite.svg#icon-versace"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="brands__item">
+                <a class="brands__link" href="#">
+                    <svg class="brands__icon" width="125" height="28" aria-label="gucci">
+                        <use xlink:href="img/sprite.svg#icon-gucci"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="brands__item">
+                <a class="brands__link" href="#">
+                    <svg class="brands__icon" width="169" height="30" aria-label="armani">
+                        <use xlink:href="img/sprite.svg#icon-armani"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+            <div class="grid-baners">
+    <div class="container">
+        <ul class="grid-baners__list grid">
+            <li class="grid-baners__item grid-baners__item--1" style="background-image: url('img/baners/bg-1.jpg');">
+                <div class="grid-baners__content">
+                    <h2 class="grid-baners__title title-md">choosе your look</h2>
+                    <p class="grid-baners__descr">See our clothing collections</p>
+                    <a class="btn btn--primary" href="#">see offers</a>
+                </div>
+            </li>
+            <li class="grid-baners__item grid-baners__item--2" style="background-image: url('img/baners/bg-2.jpg');">
+                <div class="grid-baners__content">
+                    <h2 class="grid-baners__title title-md">Up to 40% off</h2>
+                    <p class="grid-baners__descr">Special offers and great deals</p>
+                    <a class="btn btn--primary" href="#">shop now</a>
+                </div>
+            </li>
+            <li class="grid-baners__item grid-baners__item--3" style="background-image: url('img/baners/bg-3.jpg');">
+                <div class="grid-baners__content">
+                    <h2 class="grid-baners__title title-md">brand new style</h2>
+                    <p class="grid-baners__descr">Popular clothing brands</p>
+                    <a class="btn btn--primary" href="#">see offers</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+            <section class="categories">
+    <div class="container">
+        <div class="categories__inner">
+            <h2 class="sr-only">categories</h2>
+            <aside class="categories__sidebar">
+                <p class="categories__title title-sm">
+                    Shop Some Wear:
+                </p>
+                <form class="categories__form" action="#">
+                    <div class="filter filter__categories">
+                        <label class="filter__label">
+                            <input class="filter__input checkbox-hidden" type="checkbox">
+                            <span class="filter__checkbox"></span>
+                            Best sellers
+                        </label>
+                        <label class="filter__label">
+                            <input class="filter__input checkbox-hidden" type="checkbox">
+                            <span class="filter__checkbox"></span>
+                            NEW Arivals
+                        </label>
+                        <label class="filter__label">
+                            <input class="filter__input checkbox-hidden" type="checkbox">
+                            <span class="filter__checkbox"></span>
+                            TOP women
+                        </label>
+                        <label class="filter__label">
+                            <input class="filter__input checkbox-hidden" type="checkbox">
+                            <span class="filter__checkbox"></span>
+                            Collection: Summer
+                        </label>
+                        <label class="filter__label">
+                            <input class="filter__input checkbox-hidden" type="checkbox">
+                            <span class="filter__checkbox"></span>
+                            Collection: spring
+                        </label>
+                        <label class="filter__label">
+                            <input class="filter__input checkbox-hidden" type="checkbox">
+                            <span class="filter__checkbox"></span>
+                            TREnding
+                        </label>
+                    </div>
+                </form>
+            </aside>
+            <div class="categories__cards grid-cards">
+                <ul class="categories__list grid-cards__list">
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                <div class="card__price-old">199.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/02.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">best sellers</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim black used
+                                </a>
+                            </h3>
+                            <div class="card__price">
+                                <div class="card__price-current">235.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/03.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <div class="card__price">
+                                <div class="card__price-current">109.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/04.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">trending</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">104.00 eur</div>
+                                <div class="card__price-old">149.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/05.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <div class="card__price">
+                                <div class="card__price-current">99.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/06.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                <div class="card__price-old">199.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/07.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">new arivals</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels
+                                </a>
+                            </h3>
+                            <span class="card__label">-50%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">49.00 eur</div>
+                                <div class="card__price-old">99.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                <div class="card__price-old">199.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                <div class="card__price-old">199.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/02.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">best sellers</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim black used
+                                </a>
+                            </h3>
+                            <div class="card__price">
+                                <div class="card__price-current">235.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/03.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <div class="card__price">
+                                <div class="card__price-current">109.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/04.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">trending</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">104.00 eur</div>
+                                <div class="card__price-old">149.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/05.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <div class="card__price">
+                                <div class="card__price-current">99.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/06.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                <div class="card__price-old">199.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/07.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">new arivals</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels
+                                </a>
+                            </h3>
+                            <span class="card__label">-50%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">49.00 eur</div>
+                                <div class="card__price-old">99.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                    <li class=" categories__item grid-cards__item">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                <div class="card__price-old">199.00 eur</div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+
+                <div class="grid-cards__bottom">
+                    <button class="categories__btn btn btn--secondary" type="button">load more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <div class="baner">
+    <div class="container">
+        <div class="baner__inner" style="background-image: url('img/baners/bg-42.jpg');">
+            <div class="baner__content content-baner">
+                <h2 class="content-baner__title title-lg">
+                    shoping without limits.
+                </h2>
+                <p class="content-baner__descr">
+                    You can choose the best option for you, and it does not matter whether you are in Prague
+                </p>
+                <a class="btn btn--primary" href="#">
+                    shop now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+            <section class="section-slider">
+    <div class="container">
+        <div class="section-slider__inner">
+            <div class="section-slider__top">
+                <h2 class="section-slider__title title-sm">Featured Items</h2>
+                <div class="section-slider__navigation">
+                    <button class="section-slider__prev section-btn-prev" type="button">
+                        <svg class="section-slider__prev-icon" width="7" height="12" aria-hidden="true">
+                            <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button class="section-slider__next section-btn-next" type="button">
+                        <svg class="section-slider__next-icon" width="7" height="12" aria-hidden="true">
+                            <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="swiper sectionSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                <div class="card__price-old">199.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/02.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">best sellers</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim black used
+                                </a>
+                            </h3>
+                            <div class="card__price">
+                                <div class="card__price-current">235.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/03.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <div class="card__price">
+                                <div class="card__price-current">109.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/04.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">trending</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">104.00 eur</div>
+                                <div class="card__price-old">149.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/05.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <div class="card__price">
+                                <div class="card__price-current">99.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/06.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                <div class="card__price-old">199.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/07.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">new arivals</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels
+                                </a>
+                            </h3>
+                            <span class="card__label">-50%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">49.00 eur</div>
+                                <div class="card__price-old">99.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                <div class="card__price-old">199.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                <div class="card__price-old">199.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <section class="section-slider">
+    <div class="container">
+        <div class="section-slider__inner">
+            <div class="section-slider__top">
+                <h2 class="section-slider__title title-sm">Most Popular</h2>
+                <div class="section-slider__navigation">
+                    <button class="section-slider__prev popular-btn-prev" type="button">
+                        <svg class="section-slider__prev-icon" width="7" height="12" aria-hidden="true">
+                            <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button class="section-slider__next popular-btn-next" type="button">
+                        <svg class="section-slider__next-icon" width="7" height="12" aria-hidden="true">
+                            <use xlink:href="img/sprite.svg#arrow-left"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="swiper popularSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                <div class="card__price-old">199.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/02.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">best sellers</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim black used
+                                </a>
+                            </h3>
+                            <div class="card__price">
+                                <div class="card__price-current">235.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/03.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <div class="card__price">
+                                <div class="card__price-current">109.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/04.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">trending</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">104.00 eur</div>
+                                <div class="card__price-old">149.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/05.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <div class="card__price">
+                                <div class="card__price-current">99.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/06.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                <div class="card__price-old">199.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/07.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">new arivals</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels
+                                </a>
+                            </h3>
+                            <span class="card__label">-50%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">49.00 eur</div>
+                                <div class="card__price-old">99.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                <div class="card__price-old">199.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-slide">
+                        <article class="card">
+                            <a class="card__img" href="/product.html">
+                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                            </a>
+                            <a class="card__categories" href="#">top women</a>
+                            <h3 class="card__title">
+                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                </a>
+                            </h3>
+                            <span class="card__label">-30%</span>
+                            <div class="card__price">
+                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                <div class="card__price-old">199.00 eur</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <div class="baner-2">
+    <div class="container">
+        <div class="baner-2__inner" style="background-image: url('img/baners/bg-5.jpg');">
+            <div class="baner-2__content content-baner">
+                <h2 class="baner-2__title content-baner__title title-lg">
+                    EXPLORE THE BEST OF YOU.
+                </h2>
+                <p class="content-baner__descr">
+                    You can choose the best option for you, and it does not matter whether you are in Prague or San
+                    Francisco.
+                </p>
+                <a class="btn btn--primary" href="#">
+                    shop now
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+            <section class="blog">
+    <div class="container">
+        <div class="blog__top">
+            <h2 class="title-sm">Blog</h2>
+        </div>
+        <ul class="blog__list">
+            <li class="blog__item">
+                <article class="blog-card">
+                    <div class="blog-card__inner">
+                        <div class="blog-card__label">
+                            Article
+                        </div>
+                        <h3 class="blog-card__title">
+                            <a class="blog-card__link" href="/article.html">
+                                Exactly What To Wear To Every Type Of Wedding This Summer Exactly What To Wear To Every Type Of Wedding This Summer
+                            </a>
+                        </h3>
+                        <p class="blog-card__text">
+                            A large part of the business here is building up the "experience". Double-page spreads
+                            in magazines. Ads on TV. Product
+                            placement and sponsorship in golf tournaments, tennis matches and sailing competitions.
+                            All of this builds up your
+                            perception of the brand - and additionally, it costs money.
+                            placement and
+                            perception of the brand - and additionally, it and additionally, it nt and sponsorship
+                            in golf tournaments, tennis matches and sailing competitions.
+                            All of this builds up your
+                            perception of the brand - and additionally, it costs money.
+                            placement and
+                            perception of the brand
+                        </p>
+                        <div class="blog-card__bottom">
+                            <time class="blog-card__date" datetime="2018-01-21">21 January 2018</time>
+                            <a class="blog-card__author" href="#">Tomas D.</a>
+                        </div>
+                    </div>
+                </article>
+            </li>
+            <li class="blog__item">
+                <article class="blog-card">
+                    <div class="blog-card__inner">
+                        <div class="blog-card__label">
+                            Article
+                        </div>
+                        <h3 class="blog-card__title">
+                            <a class="blog-card__link" href="/article.html">
+                                Exactly What To Wear To Every To Wear To Every
+                            </a>
+                        </h3>
+                        <p class="blog-card__text">
+                            A large part of the business here is building up the "experience". Double-page spreads
+                        </p>
+                        <div class="blog-card__bottom">
+                            <time class="blog-card__date" datetime="2018-01-21">21 January 2018</time>
+                            <a class="blog-card__author" href="#">Tomas D.</a>
+                        </div>
+                    </div>
+                </article>
+            </li>
+            <li class="blog__item">
+                <article class="blog-card">
+                    <div class="blog-card__inner">
+                        <div class="blog-card__label">
+                            Article
+                        </div>
+                        <h3 class="blog-card__title">
+                            <a class="blog-card__link" href="/article.html">
+                                Exactly What To Wear To Every To Wear To Every
+                            </a>
+                        </h3>
+                        <p class="blog-card__text">
+                            A large part of the business here is building up the "experience". Double-page spreads
+                        </p>
+                        <div class="blog-card__bottom">
+                            <time class="blog-card__date" datetime="2018-01-21">21 January 2018</time>
+                            <a class="blog-card__author" href="#">Tomas D.</a>
+                        </div>
+                    </div>
+                </article>
+            </li>
+            <li class="blog__item">
+                <article class="blog-card">
+                    <div class="blog-card__inner">
+                        <div class="blog-card__label">
+                            Article
+                        </div>
+                        <h3 class="blog-card__title">
+                            <a class="blog-card__link" href="/article.html">
+                                Exactly What To Wear To Every Type Of Wedding This Summer Exactly What To Wear To Every Type Of Wedding This Summer
+                            </a>
+                        </h3>
+                        <p class="blog-card__text">
+                            A large part of the business here is building up the "experience". Double-page spreads
+                            in magazines. Ads on TV. Product
+                            placement and sponsorship in golf tournaments, tennis matches and sailing competitions.
+                            All of this builds up your
+                            perception of the brand - and additionally, it costs money.
+                            placement and
+                            perception of the brand - and additionally, it and additionally, it nt and sponsorship
+                            in golf tournaments, tennis matches and sailing competitions.
+                            All of this builds up your
+                            perception of the brand - and additionally, it costs money.
+                            placement and
+                            perception of the brand
+                        </p>
+                        <div class="blog-card__bottom">
+                            <time class="blog-card__date" datetime="2018-01-21">21 January 2018</time>
+                            <a class="blog-card__author" href="#">Tomas D.</a>
+                        </div>
+                    </div>
+                </article>
+            </li>
+        </ul>
+    </div>
+</section>
+            <div class="benefits">
+    <div class="container">
+        <ul class="benefits__list">
+            <li class="benefits__item">
+                Duties and Taxes Guaranteed
+            </li>
+            <li class="benefits__item">
+                Free Express Shipping
+            </li>
+            <li class="benefits__item">
+                Customer Love
+            </li>
+            <li class="benefits__item">
+                Easy Returns
+            </li>
+            <li class="benefits__item">
+                Secure Payment
+            </li>
+        </ul>
+    </div>
+</div>
+            <div class="overlay"></div>
+        </div>
+        <footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__logo">
+                <a class="logo" href="#">
+                    <img class="logo__img" src="img/logo.svg" width="94" height="44" alt="logo">
+                </a>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title" data-title="accordionFooterBtn">
+                    features
+                </h3>
+                <div class="footer__column-content">
+                    <ul class="footer__column-list">
+                        <li class="footer__column-item">
+                            <a class="footer__column-link link" href="#">
+                                men
+                            </a>
+                        </li>
+                        <li class="footer__column-item">
+                            <a class="footer__column-link link" href="#">
+                                women
+                            </a>
+                        </li>
+                        <li class="footer__column-item">
+                            <a class="footer__column-link link" href="#">
+                                boys
+                            </a>
+                        </li>
+                        <li class="footer__column-item">
+                            <a class="footer__column-link link" href="#">
+                                new arrivals
+                            </a>
+                        </li>
+                        <li class="footer__column-item">
+                            <a class="footer__column-link link" href="#">
+                                shoes
+                            </a>
+                        </li>
+                        <li class="footer__column-item">
+                            <a class="footer__column-link link" href="#">
+                                cothes
+                            </a>
+                        </li>
+                        <li class="footer__column-item">
+                            <a class="footer__column-link link" href="#">
+                                accessories
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title" data-title="accordionFooterBtn">
+                    menu
+                </h3>
+                <nav class="footer__column-content">
+                    <ul class="footer__column-list">
+                        <li class="footer__column-item">
+                            <a class="footer__column-link link" href="#">
+                                About us
+                            </a>
+                        </li>
+                        <li class="footer__column-item">
+                            <a class="footer__column-link link" href="#">
+                                contacts us
+                            </a>
+                        </li>
+                        <li class="footer__column-item">
+                            <a class="footer__column-link link" href="#">
+                                my account
+                            </a>
+                        </li>
+                        <li class="footer__column-item">
+                            <a class="footer__column-link link" href="#">
+                                orders history
+                            </a>
+                        </li>
+                        <li class="footer__column-item">
+                            <a class="footer__column-link link" href="#">
+                                my wishlist
+                            </a>
+                        </li>
+                        <li class="footer__column-item">
+                            <a class="footer__column-link link" href="#">
+                                blog
+                            </a>
+                        </li>
+                        <li class="footer__column-item">
+                            <a class="footer__column-link link" href="#">
+                                login
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title" data-title="accordionFooterBtn">
+                    contacts us
+                </h3>
+                <div class="footer__column-content">
+                    <address class="contacts">
+                        <ul class="contacts__list">
+                            <li class="contacts__item">
+                                address:
+                                <a class="contacts__link link" href="#">
+                                    123 street name, city, england
+                                </a>
+                            </li>
+                            <li class="contacts__item">
+                                phone:
+                                <a class="contacts__link link" href="tel:1234567890">
+                                    (123)456-7890
+                                </a>
+                            </li>
+                            <li class="contacts__item">
+                                email:
+                                <a class="contacts__link link" href="mailto:mail@example.com">
+                                    mail@example.com
+                                </a>
+                            </li>
+                            <li class="contacts__item">
+                                working days/hours
+                                <p class="contacts__link">
+                                    mon-sun / 9:00am - 8:00pm
+                                </p>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title" data-title="accordionFooterBtn">
+                    follow us
+                </h3>
+                <div class="footer__column-content">
+                    <div class="social">
+                        <ul class="social__list">
+                            <li class="social__item">
+                                <a class="social__link link" href="#">
+                                    <svg class="social__link-icon" width="21" height="21">
+                                        <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                                    </svg>
+                                    facebook
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link link" href="#">
+                                    <svg class="social__link-icon" width="21" height="21">
+                                        <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                                    </svg>
+                                    twitter
+                                </a>
+                            </li>
+                            <li class="social__item">
+                                <a class="social__link link" href="#">
+                                    <svg class="social__link-icon" width="21" height="21">
+                                        <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                                    </svg>
+                                    instagram
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__join">
+                <h3 class="footer__join-title">
+                    join us
+                </h3>
+                <div class="footer__join-content">
+                    <form class="form-subscribe">
+                        <h4 class="form-subscribe__title">
+                            Subscribe to our newsletters
+                        </h4>
+                        <label class="form-subscribe__label">
+                            <input class="form-subscribe__input" type="email" placeholder="Email Address" required>
+                        </label>
+                        <button class="form-subscribe__btn btn">
+                            subscribe!
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <p class="footer__copyright">
+            © 2019. Crisp theme Developed by Belvg
+        </p>
+    </div>
+</footer>
+    </div>
+    <script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+.baner-2 {
+    @include margin-bottom(80, 25);
+    &__inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        min-height: 363px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+        @include mq("desktop-lg") {
+            justify-content: center;
+            min-height: 463px;
+            background-size: cover;
+            background-position: center center;
+            padding: 0 15px;
+        }
+        @include mq("tablet") {
+            min-height: 350px;
+        }
+        @include mq("mobile") {
+            min-height: 200px;
+            padding: 0 30px;
+        }
+    }
+    &__content {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        @include mq("desktop-lg") {
+            max-width: 570px;
+            text-align: center;
+            border: 2px solid var(--silver-color);
+        }
+        @include mq("tablet") {
+            max-width: 450px;
+        }
+        @include mq("tablet-sm") {
+            max-width: 350px;
+        }
+    }
+    &__title {
+        @include mq("desktop-lg") {
+            padding-top: 0;
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+}

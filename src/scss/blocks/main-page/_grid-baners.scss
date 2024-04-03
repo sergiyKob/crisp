@@ -1,0 +1,68 @@
+.grid-baners {
+    margin-bottom: 30px;
+    &__list {
+        grid-template-rows: repeat(2, 434px);
+        gap: 30px;
+        @include mq("desktop-lg") {
+            grid-template-rows: repeat(2, 370px);
+        }
+        @include mq("desktop") {
+            gap: 15px;
+        }
+        @include mq("tablet") {
+            grid-template-rows: repeat(4, 360px);
+        }
+        @include mq("mobile") {
+            grid-template-rows: repeat(4, 170px);
+        }
+    }
+    &__item {
+        @include img-bg;
+        position: relative;
+        display: flex;
+        align-items: center;
+        background-color: var(--silver-color);
+        padding: 55px;
+        @include mq("mobile") {
+            padding: 15px;
+        }
+    }
+    &__item--1,
+    &__item--2,
+    &__item--3 {
+        grid-column: span 9;
+        @include mq("tablet") {
+            grid-column: span 18;
+        }
+    }
+    &__item--1 {
+        justify-content: end;
+    }
+    &__item--2 {
+        grid-row: span 2;
+    }
+    &__content {
+        max-width: 370px;
+        @include mq("mobile") {
+            max-width: 144px;
+        }
+    }
+    &__title {
+        @include line-clamp(2);
+        text-wrap: balance;
+        margin-bottom: 7px;
+    }
+    &__descr {
+        @include adaptiv-font(22, 10);
+        @include line-clamp(3);
+        font-family: "Roboto", sans-serif;
+        line-height: 1.5;
+        margin-bottom: 50px;
+        @include mq("tablet") {
+            margin-bottom: 30px;
+        }
+        @include mq("mobile") {
+            margin-bottom: 5px;
+        }
+    }
+}

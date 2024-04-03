@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('blocks/head.html', {
+"pageTitle": "Dashboard"
+})
+
+<body class="body">
+    <div class="wrapper">
+        @@include('blocks/header.html')
+        <div class="main">
+            <section class="profile">
+                <div class="container-middle">
+                    <div class="profile__breadcrumbs">
+                        <nav class="breadcrumbs flex-jcc">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link" href="/">Home</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link breadcrumbs__link--current">My Dashboard</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <button class="filter-mobile-btn dashboard-menu-btn">
+                        Account Dashboard
+                        <svg class="filter-mobile-btn__icon" width="19" height="11">
+                            <use xlink:href="img/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </button>
+                    <h1 class="profile__title">
+                        My Dashboard
+                    </h1>
+                    <div class="profile__body">
+                        <section class="dashboard">
+                            <div class="dashboard__inner">
+                                <aside class="dashboard__sidebar">
+                                    <nav class="dashboard-nav">
+                                        <ul class="dashboard-nav__list">
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link dashboard-nav__link--active">Account
+                                                    Dashboard</a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link"
+                                                   href="/edit-account.html">Account
+                                                    Information</a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link"
+                                                   href="/new-address.html">Address
+                                                    Book</a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link" href="#">My Orders</a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link" href="/wishlist.html">My
+                                                    Wishlist</a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link" href="#">Newsletter
+                                                    Subscriptions</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </aside>
+                                <div class="dashboard__body">
+                                    <div class="dashboard-section">
+                                        <div class="dashboard-section__top">
+                                            <h2 class="title-sm">Account Information</h2>
+                                        </div>
+                                        <ul class="dashboard-section__list">
+                                            <li class="dashboard-section__item">
+                                                <h3 class="dashboard-section__subtitle">Contact Information
+                                                </h3>
+                                                <p class="dashboard-section__text">Alex Driver</p>
+                                                <p class="dashboard-section__text">ExampeAdress@gmail.com
+                                                </p>
+                                                <div class="dashboard-section__buttons">
+                                                    <button class="btn btn--edit"
+                                                            type="button">Edit</button>
+                                                    <button class="btn btn--edit" type="button">Change
+                                                        Password</button>
+                                                </div>
+                                            </li>
+                                            <li class="dashboard-section__item">
+                                                <h3 class="dashboard-section__subtitle">Newsletters</h3>
+                                                <p class="dashboard-section__text">You don't subscribe to
+                                                    our
+                                                    newsletter.</p>
+                                                <button class="btn btn--edit" type="button">Edit</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="dashboard-section">
+                                        <div class="dashboard-section__top">
+                                            <h2 class="title-sm">Address Book</h2>
+                                            <button class="btn btn--edit" aria-label="edit" title="edit">
+                                                <svg width="10" height="10">
+                                                    <use xlink:href="img/sprite.svg#icon-pen"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <ul class="dashboard-section__list">
+                                            <li class="dashboard-section__item">
+                                                <h3 class="dashboard-section__subtitle">Default Billing
+                                                    Address</h3>
+                                                <p class="dashboard-section__text">You have not set a
+                                                    default billing
+                                                    address.</p>
+                                                <button class="btn btn--edit" type="button">Edit
+                                                    Address</button>
+                                            </li>
+                                            <li class="dashboard-section__item">
+                                                <h3 class="dashboard-section__subtitle">Default Shipping
+                                                    Address</h3>
+                                                <p class="dashboard-section__text">You have not set a
+                                                    default shipping
+                                                    address.</p>
+                                                <button class="btn btn--edit" type="button">Edit
+                                                    Address</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+            @@include('blocks/benefits.html')
+            <div class="overlay"></div>
+        </div>
+        @@include('blocks/footer.html')
+    </div>
+    <script src="./js/dashboard.bundle.js"></script>
+</body>
+
+</html>

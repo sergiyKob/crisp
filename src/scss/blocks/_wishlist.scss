@@ -1,0 +1,9 @@
+.wishlist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    @include mq("mobile") {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}

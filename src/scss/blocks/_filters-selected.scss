@@ -1,0 +1,81 @@
+.filters-selected {
+    color: var(--black-color);
+    background-color: var(--light-color);
+    border: 1px solid var(--black-color);
+    padding: 30px 20px;
+    margin-bottom: 60px;
+    margin-right: 24px;
+
+    @include mq("tablet") {
+        display: none;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 35px;
+    }
+
+    &__title {
+        font-size: 32px;
+        font-weight: 400;
+    }
+
+    &__btn-reset {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        text-transform: uppercase;
+        transition: opacity var(--transition);
+
+        @include hover {
+            text-decoration: underline;
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    &__reset-icon {
+        flex-shrink: 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__item-title {
+        margin-bottom: 15px;
+    }
+
+    &__item-box {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    &__item-link {
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        line-height: 1;
+        transition: opacity var(--transition);
+
+        @include hover {
+            text-decoration: underline;
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
+    }
+}

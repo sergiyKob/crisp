@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('blocks/head.html', {
+"pageTitle": "Cart"
+})
+
+<body class="body">
+    <div class="wrapper">
+        @@include('blocks/header.html')
+        <div class="main">
+            <section class="profile">
+                <div class="container-middle">
+                    <div class="profile__breadcrumbs">
+                        <nav class="breadcrumbs flex-jcc">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link" href="/" target="_blank">Home</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link breadcrumbs__link--current">Shopping Cart</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <h1 class="profile__title">Shopping Cart</h1>
+                    <div class="cart">
+                        <div class="cart__inner">
+                            <div class="cart__left">
+                                <div class="cart__head">
+                                    <div class="cart__head-item cart__head-product">Product</div>
+                                    <div class="cart__head-item cart__head-price">Price</div>
+                                    <div class="cart__head-item cart__head-size">Size</div>
+                                    <div class="cart__head-item cart__head-qty">Quantity</div>
+                                    <div class="cart__head-item cart__head-tottal">Total</div>
+                                </div>
+                                <ul class="cart__list">
+                                    <li class="cart__item">
+                                        <article class="cart-card">
+                                            <div class="cart-card__product">
+                                                <img class="cart-card__img" src="img/cards/01.jpg" width="84"
+                                                    height="103" alt="dress">
+                                                <a class="cart-card__title" href="/product.html">
+                                                    <h3 class="cart-card__title">
+                                                        Angels malu zip jeans slim black used Angels malu zip jeans slim
+                                                        black used
+                                                    </h3>
+                                                </a>
+                                                <div class="color-selection__link color-selection__link--current"
+                                                    href="#" style="background-color: black;">
+                                                </div>
+                                            </div>
+                                            <div class="cart-card__price">120.00 eur</div>
+                                            <div class="cart-card__size">w32</div>
+                                            <div class="cart-card__qty">
+                                                <div class="cart-card__counter counter" data-counter="">
+                                                    <button class="counter__btn counter__btn--minus" type="button"
+                                                        fdprocessedid="rt7wm4">
+                                                        <svg class="counter__btn-icon" width="18" height="18">
+                                                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <label class="counter__label">
+                                                        <input class="counter__input" type="number" data-counter
+                                                            value="1" min="1" max="99" fdprocessedid="wnokr">
+                                                    </label>
+                                                    <button class="counter__btn counter__btn--plus" type="button"
+                                                        fdprocessedid="gfd3ns">
+                                                        <svg class="counter__btn-icon" width="18" height="18">
+                                                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="cart-card__total">120.00 eur</div>
+                                            <div class="cart-card__buttons">
+                                                <button class="cart-card__btn btn btn--edit" aria-label="delete"
+                                                    title="add to wishlist">
+                                                    <svg width="10" height="10">
+                                                        <use xlink:href="img/sprite.svg#icon-heart-outline">
+                                                        </use>
+                                                    </svg>
+                                                </button>
+                                                <button class="cart-card__btn btn btn--edit" aria-label="delete"
+                                                    title="edit">
+                                                    <svg width="10" height="10">
+                                                        <use xlink:href="img/sprite.svg#icon-pen">
+                                                        </use>
+                                                    </svg>
+                                                </button>
+                                                <button class="cart-card__btn btn btn--edit" aria-label="delete"
+                                                    title="delete">
+                                                    <svg width="10" height="10">
+                                                        <use xlink:href="img/sprite.svg#icon-close">
+                                                        </use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="cart__item">
+                                        <article class="cart-card">
+                                            <div class="cart-card__product">
+                                                <img class="cart-card__img" src="img/cards/02.jpg" width="84"
+                                                    height="103" alt="dress">
+                                                <a class="cart-card__title" href="/product.html">
+                                                    <h3 class="cart-card__title">
+                                                        Angels malu zip jeans slim black used Angels malu zip jeans slim
+                                                        black used
+                                                    </h3>
+                                                </a>
+                                                <div class="color-selection__link color-selection__link--current"
+                                                    href="#" style="background-color: black;">
+                                                </div>
+                                            </div>
+                                            <div class="cart-card__price">120.00 eur</div>
+                                            <div class="cart-card__size">w32</div>
+                                            <div class="cart-card__qty">
+                                                <div class="cart-card__counter counter" data-counter="">
+                                                    <button class="counter__btn counter__btn--minus" type="button"
+                                                        fdprocessedid="rt7wm4">
+                                                        <svg class="counter__btn-icon" width="18" height="18">
+                                                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <label class="counter__label">
+                                                        <input class="counter__input" type="number" data-counter
+                                                            value="1" min="1" max="99" fdprocessedid="wnokr">
+                                                    </label>
+                                                    <button class="counter__btn counter__btn--plus" type="button"
+                                                        fdprocessedid="gfd3ns">
+                                                        <svg class="counter__btn-icon" width="18" height="18">
+                                                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="cart-card__total">120.00 eur</div>
+                                            <div class="cart-card__buttons">
+                                                <button class="cart-card__btn btn btn--edit" aria-label="delete"
+                                                    title="add to wishlist">
+                                                    <svg width="10" height="10">
+                                                        <use xlink:href="img/sprite.svg#icon-heart-outline">
+                                                        </use>
+                                                    </svg>
+                                                </button>
+                                                <button class="cart-card__btn btn btn--edit" aria-label="delete"
+                                                    title="edit">
+                                                    <svg width="10" height="10">
+                                                        <use xlink:href="img/sprite.svg#icon-pen">
+                                                        </use>
+                                                    </svg>
+                                                </button>
+                                                <button class="cart-card__btn btn btn--edit" aria-label="delete"
+                                                    title="delete">
+                                                    <svg width="10" height="10">
+                                                        <use xlink:href="img/sprite.svg#icon-close">
+                                                        </use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="cart__item">
+                                        <article class="cart-card">
+                                            <div class="cart-card__product">
+                                                <img class="cart-card__img" src="img/cards/03.jpg" width="84"
+                                                    height="103" alt="dress">
+                                                <a class="cart-card__title" href="/product.html">
+                                                    <h3 class="cart-card__title">
+                                                        Angels malu zip jeans slim black used Angels malu zip jeans slim
+                                                        black used
+                                                    </h3>
+                                                </a>
+                                                <div class="color-selection__link color-selection__link--current"
+                                                    href="#" style="background-color: black;">
+                                                </div>
+                                            </div>
+                                            <div class="cart-card__price">120.00 eur</div>
+                                            <div class="cart-card__size">w32</div>
+                                            <div class="cart-card__qty">
+                                                <div class="cart-card__counter counter" data-counter="">
+                                                    <button class="counter__btn counter__btn--minus" type="button"
+                                                        fdprocessedid="rt7wm4">
+                                                        <svg class="counter__btn-icon" width="18" height="18">
+                                                            <use xlink:href="img/sprite.svg#icon-minus"></use>
+                                                        </svg>
+                                                    </button>
+                                                    <label class="counter__label">
+                                                        <input class="counter__input" type="number" data-counter
+                                                            value="1" min="1" max="99" fdprocessedid="wnokr">
+                                                    </label>
+                                                    <button class="counter__btn counter__btn--plus" type="button"
+                                                        fdprocessedid="gfd3ns">
+                                                        <svg class="counter__btn-icon" width="18" height="18">
+                                                            <use xlink:href="img/sprite.svg#icon-plus"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="cart-card__total">120.00 eur</div>
+                                            <div class="cart-card__buttons">
+                                                <button class="cart-card__btn btn btn--edit" aria-label="delete"
+                                                    title="add to wishlist">
+                                                    <svg width="10" height="10">
+                                                        <use xlink:href="img/sprite.svg#icon-heart-outline">
+                                                        </use>
+                                                    </svg>
+                                                </button>
+                                                <button class="cart-card__btn btn btn--edit" aria-label="delete"
+                                                    title="edit">
+                                                    <svg width="10" height="10">
+                                                        <use xlink:href="img/sprite.svg#icon-pen">
+                                                        </use>
+                                                    </svg>
+                                                </button>
+                                                <button class="cart-card__btn btn btn--edit" aria-label="delete"
+                                                    title="delete">
+                                                    <svg width="10" height="10">
+                                                        <use xlink:href="img/sprite.svg#icon-close">
+                                                        </use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </article>
+                                    </li>
+
+
+                                </ul>
+                                <div class="cart__foot">
+                                    <a class="cart__foot-link btn btn--secondary" href="#">continue shopping</a>
+                                    <button class="cart__foot-btn btn btn--secondary" type="button">
+                                        clear shopping cart
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="cart__aside">
+                                <form class="cart-form">
+                                    <div class="cart-form__top">
+                                        <div class="cart-form__discount">
+                                            <div class="cart-form__title title-sm">
+                                                Apply Discount Code
+                                            </div>
+                                            <label class="cart-form__label">
+                                                <input class="cart-form__input form__input" type="text"
+                                                    placeholder="Enter discount code" required>
+                                                <button class="cart-form__discount-btn btn">apply discount</button>
+                                            </label>
+                                        </div>
+                                        <div class="cart-form__estimate">
+                                            <button class="cart-form__title cart-form__toggler title-sm" type="button">
+                                                Estimate Shipping and Tax
+                                            </button>
+                                            <div class="cart-form__estimate-inner">
+                                                <p class="cart-form__estimate-descr">
+                                                    Enter your destination to get a shipping estimate.
+                                                </p>
+                                                <label class="cart-form__label form__label">
+                                                    Country *
+                                                    <div class="cart-form__select-wrap">
+                                                        <select class="form__select multi-default choices__input">
+                                                            <option value="" selected>USA</option>
+                                                            <option value="">Canada</option>
+                                                            <option value="">Mexico</option>
+                                                        </select>
+                                                    </div>
+                                                </label>
+                                                <label class="cart-form__label form__label">
+                                                    State/Province *
+                                                    <div class="cart-form__select-wrap">
+                                                        <select class="form__select multi-default choices__input">
+                                                            <option value="">California</option>
+                                                            <option value="">Washington</option>
+                                                            <option value="">New York</option>
+                                                        </select>
+                                                    </div>
+                                                </label>
+                                                <label class="cart-form__label form__label">
+                                                    Zip/Postal Code
+                                                    <input class="cart-form__input form__input" type="number" required>
+                                                </label>
+                                                <div class="cart-form__rate">
+                                                    Flat Rate
+                                                    <label class="cart-form__rate-label">
+                                                        <input type="radio" name="rate" checked>
+                                                        Fixed 5.00 EUR
+                                                    </label>
+                                                </div>
+                                                <div class="cart-form__best-way">
+                                                    Best Way
+                                                    <label class="cart-form__rate-label">
+                                                        <input type="radio" name="rate">
+                                                        Table Rate 10.00 EUR
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart-form__bottom">
+                                        <div class="cart-form__rows">
+                                            <div class="cart-form__row">
+                                                Subtottal
+                                                <span>120.00 eur</span>
+                                            </div>
+                                            <div class="cart-form__row cart-form__tax">
+                                                Tax
+                                                <span>0.00 eur</span>
+                                            </div>
+                                            <div class="cart-form__row cart-form__total">
+                                                Order Total
+                                                <span>120.00 eur</span>
+                                            </div>
+                                        </div>
+                                        <a class="cart-form__link" href="#">
+                                            Check Out with Multiple Addresses
+                                        </a>
+                                        <a class="btn btn--primary-2" href="#">
+                                            proceed to checkout
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('blocks/benefits.html')
+        </div>
+
+        <div class="overlay"></div>
+        @@include('blocks/footer.html')
+    </div>
+    <script src="./js/cart.bundle.js"></script>
+</body>
+
+</html>

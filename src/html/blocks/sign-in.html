@@ -1,0 +1,40 @@
+<div id="popup-1" class="popup" data-popup>
+    <div class="popup__inner">
+        <button class="popup__close flex-center" data-popup-close aria-label="close" title="close">
+            <svg class="popup__close-icon" width="20" height="20">
+                <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+        </button>
+        <div class="sign-in">
+            <h3 class="sign-in__title title-sm">
+                login your account
+            </h3>
+            <form class="sign-in__form form">
+                <div class="sign-in__inputs">
+                    <div class="sign-in__row">
+                        <label class="form__label">
+                            <input class="form__input" type="email" placeholder="daisy.watson@example.com" required>
+                        </label>
+                    </div>
+                    <div class="sign-in__row">
+                        <label class="form__label">
+                            <input class="form__input" type="password" placeholder="Password" required>
+                        </label>
+                    </div>
+                    <div class="sign-in__aggree">
+                        <label class="checkbox">
+                            <input class="checkbox__input checkbox-hidden" type="checkbox">
+                            <span class="checkbox__modified"></span>
+                            By usign this form you agree with the storage and handling of your data by this
+                            website.
+                        </label>
+                    </div>
+                </div>
+                <div class="sign-in__buttons">
+                    <button class="sign-in__btn btn btn--secondary" type="submit">sign in</button>
+                    <a class="btn btn--primary-2" href="/create-account.html">create an account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

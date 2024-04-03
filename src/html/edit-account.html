@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('blocks/head.html', {
+"pageTitle": "edit-account"
+})
+
+<body class="body">
+    <div class="wrapper">
+        @@include('blocks/header.html')
+        <div class="main">
+            <section class="profile">
+                <div class="container-middle">
+                    <div class="profile__breadcrumbs">
+                        <nav class="breadcrumbs flex-jcc">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link" href="/">Home</a>
+                                </li>
+                                <li class=" breadcrumbs__item">
+                                    <a class="breadcrumbs__link breadcrumbs__link--current">
+                                        Create New Customer Account</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <button class="filter-mobile-btn dashboard-menu-btn">
+                        Account Information
+                        <svg class="filter-mobile-btn__icon" width="19" height="11">
+                            <use xlink:href="img/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </button>
+                    <h1 class="profile__title">
+                        Edit Account Information
+                    </h1>
+                    <div class="profile__body">
+                        <div class="dashboard">
+                            <div class="dashboard__inner">
+                                <aside class="dashboard__sidebar">
+                                    <nav class="dashboard-nav">
+                                        <ul class="dashboard-nav__list">
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link" href="/dashboard.html">
+                                                    Account Dashboard
+                                                </a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link dashboard-nav__link--active">
+                                                    Account Information
+                                                </a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link" href="/new-address.html">
+                                                    Address Book
+                                                </a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link" href="#">
+                                                    My Orders
+                                                </a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link" href="/wishlist.html">
+                                                    My Wishlist
+                                                </a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link" href="#">
+                                                    Newsletter
+                                                    Subscriptions
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </aside>
+                                <div class="dashboard__body">
+                                    <form class="edit-account form">
+                                        <h2 class="edit-account__title title-sm">Account Information</h2>
+                                        <label class="edit-account__label form__label">
+                                            First name *
+                                            <input class="form__input" type="text" placeholder="Alex"
+                                                   required>
+                                        </label>
+                                        <label class="edit-account__label form__label">
+                                            Last Name *
+                                            <input class="form__input" type="text" placeholder="Driver"
+                                                   required>
+                                        </label>
+                                        <div class="edit-account__checkboxs">
+                                            <label class="edit-account__checkbox checkbox">
+                                                <input class="checkbox__input checkbox-hidden"
+                                                       type="checkbox">
+                                                <span class="checkbox__modified"></span>
+                                                Change Email
+                                            </label>
+                                            <label class="edit-account__checkbox checkbox">
+                                                <input class="checkbox__input checkbox-hidden"
+                                                       type="checkbox">
+                                                <span class="checkbox__modified"></span>
+                                                Change Password
+                                            </label>
+                                        </div>
+                                        <button class="edit-account__btn btn btn--primary-2"
+                                                type="submit">Save</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('blocks/benefits.html')
+            <div class="overlay"></div>
+        </div>
+        @@include('blocks/footer.html')
+    </div>
+    <script src="./js/editAccount.bundle.js"></script>
+</body>
+
+</html>

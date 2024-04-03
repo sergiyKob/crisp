@@ -1,0 +1,48 @@
+.sign-in {
+    height: 100%;
+    width: 100%;
+
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 30px;
+
+        @include mq-horizontal("tablet-md") {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__form {
+        height: calc(100% - 60px);
+        font-family: "Roboto", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    &__row {
+        margin-bottom: 18px;
+    }
+
+    &__aggree {
+        color: var(--gray1-color);
+        font-size: 14px;
+        margin-bottom: 80px;
+
+        @include mq-horizontal("tablet-md") {
+            margin-bottom: 25px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.sign-in .form__input {
+    @include mq("tablet") {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,187 @@
+.cart-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    &__top {
+        background-color: var(--light-blue-hover);
+        border: 2px solid var(--silver-color);
+        padding: 32px 24px;
+    }
+
+    &__discount {
+        margin-bottom: 25px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__label {
+        display: flex;
+        gap: 5px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        @include mq("desktop") {
+            flex-direction: column;
+        }
+    }
+
+    &__input,
+    &__select-wrap {
+        width: 65%;
+        @include mq("desktop") {
+            width: 100%;
+        }
+    }
+
+    &__input {
+        @include mq("tablet") {
+            max-width: 100%;
+        }
+    }
+
+    &__discount-btn {
+        box-shadow: 0 0 0 1px var(--silver-color);
+        padding: 12px;
+        text-wrap: nowrap;
+        &:focus {
+            box-shadow: 0 0 0 1px var(--black-color);
+        }
+        @include hover {
+            background-color: var(--light-color);
+        }
+        &:active {
+            opacity: var(--opacity);
+        }
+    }
+
+    &__estimate-inner {
+        max-height: 0;
+        will-change: max-height;
+        opacity: 0;
+        -webkit-transition:
+            max-height 0.3s,
+            opacity 0.3s,
+            will-change 0.3s;
+        transition:
+            max-height 0.3s,
+            opacity 0.3s,
+            will-change 0.3s;
+        &.is-open {
+            opacity: 1;
+        }
+    }
+
+    &__estimate-descr {
+        font-family: "Roboto", sans-serif;
+        color: var(--gray1-color);
+        margin-bottom: 15px;
+    }
+
+    &__toggler {
+        position: relative;
+        width: 100%;
+        text-align: left;
+        padding: 5px;
+        margin: 0 -5px 20px;
+        &::before,
+        &:after {
+            @include pseudo;
+            background-color: var(--silver-color);
+            width: 15px;
+            height: 2px;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            transition: var(--transition);
+        }
+        &:after {
+            transform: translateY(-50%) rotate(90deg);
+        }
+        &.is-active {
+            &:after {
+                transform: translateY(-50%) rotate(0);
+            }
+        }
+        &:focus {
+            box-shadow: 0 0 0 1px var(--black-color);
+        }
+        @include hover {
+            background-color: var(--black-rgba-10);
+        }
+        &:active {
+            opacity: var(--opacity);
+        }
+    }
+
+    &__row,
+    &__best-way,
+    &__rate {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    &__rate,
+    &__best-way {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__rate-label {
+        font-size: 14px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    &__bottom {
+        background-color: var(--light-blue-hover);
+        border: 2px solid var(--silver-color);
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__rows {
+        display: flex;
+        flex-direction: column;
+        padding: 32px 24px 0;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &:last-child {
+            border-bottom: 1px solid var(--silver-color);
+            padding-bottom: 20px;
+        }
+    }
+
+    &__tax {
+        color: var(--gray1-color);
+    }
+
+    &__total {
+        font-size: 24px;
+    }
+
+    &__link {
+        color: var(--gray1-color);
+        padding: 15px;
+        text-align: center;
+        margin: 0 1px 5px;
+        transition:
+            color var(--transition),
+            opacity var(--transition);
+        &:focus {
+            box-shadow: 0 0 0 1px var(--black-color);
+        }
+        @include hover {
+            text-decoration: var(--text-decoration);
+            color: var(--black-color);
+        }
+        &:active {
+            opacity: var(--opacity);
+        }
+    }
+}

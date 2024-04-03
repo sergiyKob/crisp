@@ -1,0 +1,90 @@
+.brands {
+    position: relative;
+    margin-bottom: 30px;
+    @include mq("mobile") {
+        margin-bottom: 15px;
+    }
+    &__title {
+        position: absolute;
+        left: 50%;
+        top: -15px;
+        transform: translateX(-50%);
+        text-transform: uppercase;
+        &::before {
+            @include pseudo;
+            width: 150%;
+            height: 32px;
+            background-color: var(--light-color);
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+        @include mq("tablet") {
+            display: none;
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 28px 12px;
+        border: 2px solid var(--silver-color);
+        @include mq("tablet") {
+            border: none;
+            padding: 0;
+            gap: 10px;
+        }
+        @include mq("mobile") {
+            gap: 10px;
+        }
+    }
+    &__item {
+        width: 235px;
+        @include mq("tablet") {
+            width: calc(25% - 10px);
+        }
+        @include mq("tablet-sm") {
+            width: calc(50% - 10px);
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--black2-color);
+        font-size: 32px;
+        font-weight: 500;
+        min-height: 140px;
+        padding: 10px;
+        text-transform: uppercase;
+        transition:
+            background-color var(--transition),
+            opacity var(--transition),
+            box-shadow var(--transition);
+        &:focus {
+            box-shadow: 0 0 0 2px var(--black-rgba-50);
+        }
+        @include hover {
+            background-color: var(--light-blue-hover);
+            .brands__icon {
+                fill: var(--black-color);
+            }
+        }
+        &:active {
+            opacity: 0.7;
+        }
+        @include mq("tablet") {
+            min-height: 100px;
+            border: 2px solid var(--silver-color);
+        }
+        @include mq("mobile") {
+            min-height: 60px;
+        }
+    }
+    &__icon {
+        fill: var(--black2-color);
+        transition: fill var(--transition);
+    }
+}

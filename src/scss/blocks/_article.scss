@@ -1,0 +1,76 @@
+.article {
+    &__baner {
+        @include img-bg;
+        min-height: 478px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+        background-color: var(--color-silver-2);
+
+        @include mq("desktop") {
+            min-height: 320px;
+        }
+
+        @include mq("mobile") {
+            min-height: 170px;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__title {
+        max-width: 1240px;
+        background-color: var(--light-color);
+        font-weight: 400;
+        padding: 10px 0;
+        text-align: center;
+
+        @include mq("tablet-sm") {
+            background-color: var(--white-rgba-60);
+            padding: 5px 0;
+        }
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+    &__content {
+        @include margin-bottom(100, 15);
+        width: 65%;
+
+        h2 {
+            @include padding-top(20, 10);
+            @include padding-bottom(20, 10);
+            font-weight: 400;
+        }
+
+        p {
+            @include adaptiv-font(18, 14);
+            font-family: "Roboto", sans-serif;
+            padding: 10px 0;
+        }
+
+        @include mq("tablet") {
+            width: 75%;
+        }
+
+        @include mq("mobile") {
+            width: 100%;
+        }
+    }
+
+    &__baners {
+        width: 25%;
+
+        @include mq("tablet-sm") {
+            width: 20%;
+        }
+
+        @include mq("mobile") {
+            display: none;
+        }
+    }
+}

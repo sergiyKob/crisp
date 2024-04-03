@@ -1,0 +1,36 @@
+.menu {
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        @include mq("tablet") {
+            flex-direction: column;
+            gap: 15px;
+            font-size: 18px;
+        }
+    }
+    &__item {
+        @include mq("tablet") {
+            width: 100%;
+        }
+    }
+    &__link {
+        display: block;
+        padding: 3px 7px;
+        @include mq("tablet") {
+            display: inline-block;
+            width: 100%;
+            padding: 11px 7px;
+            margin: 0;
+            text-align: center;
+            background-color: var(--black2-color);
+        }
+    }
+    &__link--active {
+        border-bottom: 2px solid var(--accent-color);
+        @include mq("tablet") {
+            border-bottom: none;
+            color: var(--accent-color);
+        }
+    }
+}

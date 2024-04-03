@@ -1,0 +1,43 @@
+.edit-account {
+    &__title {
+        @include margin-bottom(35, 10);
+    }
+    &__label {
+        margin-bottom: 15px;
+    }
+    &__checkboxs {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include margin-bottom(60, 25);
+    }
+    &__checkbox {
+        font-family: "Roboto", sans-serif;
+        color: var(--gray1-color);
+        font-size: 14px;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+        @include hover {
+            color: var(--black-color);
+            text-decoration: underline;
+        }
+        &:active {
+            opacity: 0.7;
+        }
+        @include mq("tablet") {
+            padding: 10px 0;
+        }
+        @include mq("tablet-sm") {
+        }
+        @include mq("mobile") {
+        }
+    }
+
+    &__btn {
+        min-width: 140px;
+        @include mq("mobile") {
+            min-width: 100%;
+        }
+    }
+}

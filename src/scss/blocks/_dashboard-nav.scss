@@ -1,0 +1,54 @@
+.dashboard-nav {
+     background-color: var(--light-color);
+     color: var(--gray1-color);
+     font-size: 18px;
+     @include mq("desktop-lg") {
+     }
+     @include mq("desktop") {
+     }
+     @include mq("tablet") {
+          display: none;
+          position: absolute;
+          left: 0;
+          top: -33px;
+          width: 100%;
+          border: 1px solid var(--silver-color);
+          z-index: 99;
+          &.is-open {
+               display: block;
+          }
+     }
+     @include mq("tablet-sm") {
+     }
+     @include mq("mobile") {
+     }
+     &__list {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+     }
+     &__item {
+     }
+     &__link {
+          display: block;
+          padding: 15px 12px;
+          transition:
+               background-color var(--transition),
+               box-shadow var(--transition),
+               opacity var(--transition);
+          &:focus {
+               box-shadow: 0 0 0 2px inset var(--gray2-color);
+          }
+          @include hover {
+               background-color: var(--light-blue-hover);
+          }
+          &:active {
+               opacity: 0.8;
+          }
+     }
+     &__link--active {
+          background-color: var(--light-blue-hover);
+          color: var(--black-color);
+          font-weight: 500;
+     }
+}

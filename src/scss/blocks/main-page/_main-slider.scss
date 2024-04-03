@@ -1,0 +1,195 @@
+.main-slider {
+    position: relative;
+
+    &__slide {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &::before {
+            @include pseudo;
+            background: linear-gradient(148deg, rgba(255, 255, 255, 0.6) 54.97%, rgba(255, 255, 255, 0) 109.02%);
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+    }
+
+    &__slide-inner {
+        display: flex;
+        align-items: center;
+        padding: 30px 15px 55px;
+
+        @include mq("tablet-sm") {
+            flex-direction: column-reverse;
+            gap: 30px;
+            padding: 30px 0 90px;
+        }
+
+        @include mq("mobile") {}
+    }
+
+    &__content {
+        position: relative;
+        max-width: 564px;
+
+        @include mq("tablet-sm") {
+            text-align: center;
+        }
+    }
+
+    &__title {
+        @include adaptiv-font(86, 32);
+        line-height: 1.1;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 50px;
+
+        @include mq("mobile") {
+            margin-bottom: 20px;
+        }
+
+        span {
+            text-shadow: none;
+            color: transparent;
+            -webkit-text-stroke: 2px var(--black-color);
+        }
+    }
+
+    &__images {
+        display: flex;
+        align-items: center;
+
+        img {
+            box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &__img1 {
+        max-width: 416px;
+        max-height: 623px;
+        transform: translateX(15%);
+        position: relative;
+        z-index: 0;
+
+        @include mq("tablet-sm") {
+            transform: translateX(15%);
+        }
+    }
+
+    &__img2 {
+        max-width: 474px;
+        max-height: 709px;
+        box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.25);
+        position: relative;
+        z-index: 1;
+
+        @include mq("tablet-sm") {
+            transform: translateX(-15%);
+        }
+    }
+
+    &__prev,
+    &__next {
+        @include flex-all-center;
+        width: 50px;
+        height: 50px;
+        background-color: var(--black-color);
+        color: var(--light-color);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        cursor: pointer;
+        transition: var(--transition);
+
+        @include hover {
+            opacity: 0.8;
+        }
+
+        &:active {
+            opacity: 0.6;
+
+        }
+
+        @include mq("tablet") {
+            width: 44px;
+            height: 44px;
+        }
+
+        @include mq("tablet-sm") {
+            right: 15px;
+            bottom: 15px;
+        }
+    }
+
+    &__prev {
+        right: 53px;
+
+        @include mq("tablet-sm") {
+            left: 15px;
+        }
+    }
+
+    &__next-icon,
+    &__prev-icon {
+        fill: var(--light-color);
+    }
+
+    &__next-icon {
+        transform: rotate(180deg);
+    }
+}
+
+.main-slider,
+.product__slider {
+    .swiper-pagination {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.product__slider .swiper-pagination {
+    justify-content: center;
+    gap: 5px;
+}
+
+.main-slider .swiper-pagination {
+    justify-content: left;
+    position: absolute;
+    left: 20px !important;
+    bottom: 20px !important;
+
+    @include mq("tablet-sm") {
+        left: 0 !important;
+        bottom: 27px !important;
+        justify-content: center;
+    }
+}
+
+.main-slider,
+.product__slider {
+    .swiper-pagination-bullet {
+        width: 18px;
+        height: 18px;
+        border-radius: 0;
+        border: 1px solid var(--gray1-color);
+        background: transparent;
+    }
+}
+
+.main-slider,
+.product__slider {
+    .swiper-pagination-bullet-active {
+        width: 22px;
+        height: 22px;
+        background: var(--black-color);
+        border: 1px solid var(--black-color);
+    }
+}

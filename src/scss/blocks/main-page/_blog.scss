@@ -1,0 +1,27 @@
+.blog {
+    @include padding-top(45, 15);
+    @include padding-bottom(45, 15);
+    background-color: #f8f9fb;
+
+    &__top {
+        @include margin-bottom(30, 15);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+
+        @include mq("desktop-lg") {
+            gap: 15px;
+        }
+
+        @include mq("desktop") {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mq("tablet-sm") {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

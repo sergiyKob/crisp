@@ -1,0 +1,12 @@
+.product-slider {
+    width: 525px;
+    @include mq("tablet") {
+        max-width: 624px;
+    }
+
+    & .swiper-slide img {
+        @include mq("mobile") {
+            margin: 0 auto;
+        }
+    }
+}

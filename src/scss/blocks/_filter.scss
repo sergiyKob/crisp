@@ -1,0 +1,246 @@
+.filter {
+    &__form {
+        margin-bottom: 15px;
+
+        @include mq("tablet") {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 25px;
+
+        @include mq("tablet") {
+            gap: 10px;
+        }
+    }
+
+    &__title {
+        position: relative;
+        width: 100%;
+        text-align: left;
+        padding: 15px 0;
+        padding-left: 12px;
+        padding-right: 24px;
+        transition:
+            background-color var(--transition),
+            box-shadow var(--transition);
+
+        &::before,
+        &::after {
+            @include pseudo;
+            background-color: var(--black2-color);
+            width: 12px;
+            height: 2px;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+        }
+
+        &::after {
+            transform: translateY(-50%) rotate(90deg);
+            transition: transform var(--transition);
+        }
+
+        &.is-active {
+            &::after {
+                transform: translateY(-50%) rotate(0deg);
+            }
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 2px inset var(--silver-color);
+        }
+
+        @include hover {
+            background-color: var(--light-blue-hover);
+        }
+
+        &:active {
+            background-color: var(--light-color);
+        }
+
+        @include mq("tablet") {
+            line-height: 1;
+            padding-top: 13px;
+            padding-bottom: 13px;
+        }
+    }
+
+    &__content {
+        display: none;
+        padding-left: 12px;
+        padding-top: 10px;
+        padding-bottom: 60px;
+
+        &.is-open {
+            display: block;
+        }
+
+        @include mq("tablet") {
+            padding-bottom: 20px;
+            padding-left: 0;
+        }
+    }
+
+    &__brand,
+    &__lenght,
+    &__categories {
+        font-family: "Roboto", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        font-size: 14px;
+        color: var(--black2-color);
+        text-transform: uppercase;
+
+        @include mq("tablet") {
+            gap: 5px;
+        }
+    }
+
+    &__categories {
+        @include mq("desktop") {
+            gap: 0;
+        }
+
+        @include mq("tablet") {
+            flex-direction: row;
+            column-gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        @include mq("mobile") {
+            column-gap: 0;
+        }
+    }
+
+    &__size {
+        max-width: 268px;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+    }
+
+    &__color {
+        max-width: 250px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        @include mq("tablet") {
+            max-width: 300px;
+            gap: 20px;
+        }
+    }
+
+    &__label {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        cursor: pointer;
+        transition: color var(--transition);
+
+        &::after {
+            @include pseudo;
+            left: 20px;
+            bottom: 2px;
+            height: 1px;
+            width: calc(100% - 20px);
+            background-color: #000;
+            opacity: 0;
+            transition: var(--transition);
+
+        }
+
+        @include hover {
+            color: var(--black-color);
+
+            &::after {
+                opacity: 1;
+            }
+
+            .filter__checkbox {
+                box-shadow: 0 0 0 1px var(--black-color);
+            }
+        }
+
+        @include mq("desktop") {
+            padding: 13px 0;
+        }
+
+        @include mq("mobile") {
+            width: 100%;
+        }
+    }
+
+    &__input {
+        &:checked+.filter__checkbox {
+            background-image: url("../img/on-checkbox.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 0 0 1px var(--black-color);
+        }
+
+        &:focus+.filter__checkbox {
+            box-shadow: 0 0 0 2px var(--black-color);
+            border: 1px solid #fff;
+
+        }
+    }
+
+    &__checkbox {
+        flex-shrink: 0;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        box-shadow: 0 0 0 1px var(--gray1-color);
+        transition:
+            box-shadow var(--transition),
+            background-color var(--transition);
+    }
+
+    &__descr {
+        @include mq("tablet") {
+            display: none;
+        }
+    }
+
+    &__descr-title {
+        margin-bottom: 20px;
+    }
+
+    &__descr-text {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        line-height: 1.55;
+        letter-spacing: 0.18px;
+    }
+
+    &__btn-wrap {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 24px;
+
+        @include mq("tablet") {
+            padding-right: 0;
+        }
+    }
+
+    &__btn {
+        min-width: 114px;
+        padding: 11px 15px;
+
+        @include mq("tablet") {
+            width: 100%;
+            padding: 13px 15px;
+        }
+    }
+}

@@ -1,0 +1,150 @@
+.cart {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 25px;
+        padding: 20px 0;
+        @include mq("tablet") {
+            display: block;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light-blue-hover);
+        }
+    }
+
+    &__left {
+        max-width: 880px;
+        display: grid;
+        grid-template-rows: 60px auto 88px;
+        @include mq("tablet") {
+            display: block;
+        }
+    }
+    &__aside {
+        width: 500px;
+        padding-top: 60px;
+        @include mq("tablet") {
+            width: 100%;
+        }
+    }
+
+    &__head {
+        display: grid;
+        grid-template-columns: 2fr 1fr 0.5fr 1fr 1fr 0.1fr;
+        color: var(--gray1-color);
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        border-bottom: 1px solid var(--silver-color);
+        @include mq("tablet-sm") {
+            display: none;
+        }
+    }
+
+    &__head-item {
+        align-self: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+    }
+    &__item {
+    }
+    &__foot {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-top: 1px solid var(--silver-color);
+        @include mq("tablet-sm") {
+            display: none;
+        }
+    }
+    &__foot-link {
+        align-self: center;
+        justify-self: start;
+    }
+    &__foot-btn {
+        align-self: center;
+        justify-self: end;
+    }
+}
+.cart-card {
+    display: grid;
+    grid-template-columns: 2fr 1fr 0.5fr 1fr 1fr 0.1fr;
+    gap: 5px;
+    @include mq("tablet-sm") {
+        grid-template-columns: 1fr 1fr 0.1fr;
+        gap: 10px;
+    }
+
+    &__product {
+        display: grid;
+        grid-template-columns: 85px auto;
+        grid-template-rows: auto;
+        gap: 10px;
+        @include mq("tablet-sm") {
+            grid-column: 1 / 3;
+        }
+    }
+
+    &__img {
+        grid-row: 1 / 3;
+    }
+
+    &__title {
+        @include line-clamp(2);
+        max-width: 200px;
+        @include hover {
+            text-decoration: var(--text-decoration);
+        }
+        @include mq("tablet-sm") {
+            max-width: 300px;
+        }
+        @include mq("mobile") {
+            font-size: 14px;
+        }
+    }
+
+    &__price {
+        @include mq("mobile") {
+            justify-self: center;
+        }
+    }
+
+    &__qty {
+        @include mq("tablet-sm") {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+    }
+
+    &__total {
+        @include mq("tablet-sm") {
+            display: none;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+        @include mq("tablet-sm") {
+            grid-column: 3 / 4;
+            grid-row: 1 / 2;
+        }
+    }
+
+    &__btn {
+        width: 32px;
+        height: 32px;
+    }
+}

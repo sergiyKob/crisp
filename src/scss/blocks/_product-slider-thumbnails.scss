@@ -1,0 +1,25 @@
+.product-slider-thumbnails {
+    flex-shrink: 0;
+    width: 82px;
+    height: 664px;
+    & .swiper-slide {
+        height: 96px !important;
+        padding: 2px;
+        cursor: pointer;
+        transition: opacity var(--transition);
+        @include hover {
+            opacity: 0.7;
+        }
+    }
+    @include mq("tablet") {
+        display: none !important;
+    }
+}
+.swiper-slide-thumb-active {
+    & img {
+        box-shadow: 0 0 0 2px var(--black-color);
+    }
+}
+
+.product__slider .swiper-pagination {
+}

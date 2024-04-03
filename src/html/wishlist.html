@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('blocks/head.html', {"pageTitle": "My Wishlist"})
+
+<body class="body">
+    <div class="wrapper">
+        @@include('blocks/header.html')
+        <div class="main">
+            <section class="profile">
+                <div class="container-middle">
+                    <div class="profile__breadcrumbs">
+                        <nav class="breadcrumbs flex-jcc">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link" href="/">Home</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link breadcrumbs__link--current">My Wishlist</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <button class="filter-mobile-btn dashboard-menu-btn">
+                        my wishlist
+                        <svg class="filter-mobile-btn__icon" width="19" height="11">
+                            <use xlink:href="img/sprite.svg#arrow-down"></use>
+                        </svg>
+                    </button>
+
+                    <h1 class="profile__title">My Wishlist</h1>
+
+                    <div class="profile__body">
+                        <div class="dashboard">
+                            <div class="dashboard__inner">
+                                <aside class="dashboard__sidebar">
+                                    <nav class="dashboard-nav">
+                                        <ul class="dashboard-nav__list">
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link" href="/dashboard.html">Account Dashboard</a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link" href="/edit-account.html">Account Information</a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link" href="/new-address.html">Address Book</a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link" href="#">My Orders</a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link dashboard-nav__link--active">My Wishlist</a>
+                                            </li>
+                                            <li class="dashboard-nav__item">
+                                                <a class="dashboard-nav__link" href="#">Newsletter Subscriptions</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </aside>
+
+                                <div class="dashboard__body">
+                                    <ul class="wishlist">
+                                        <li class="wishlist__item">
+                                            <article class="wishlist-card" data-id="01">
+                                                <div class="wishlist-card__inner">
+                                                    <a class="wishlist-card__img" href="/product.html">
+                                                        <img src="img/cards/01.jpg" width="167" height="219" alt="dress">
+                                                    </a>
+                                                    <a class="wishlist-card__link" href="/product.html" title="Angels malu zip jeans slim black used">
+                                                        <h2 class="wishlist-card__title">
+                                                            Angels malu zip jeans slim black used
+                                                        </h2>
+                                                    </a>
+                                                    <div class="wishlist-card__price">50 eur</div>
+                                                    <div class="wishlist-card__bottom">
+                                                        <label class="wishlist-card__label">
+                                                            <input class="wishlist-card__input" type="number" value="1" min="1" max="99" data-counter>
+                                                        </label>
+                                                        <button class="wishlist-card__btn btn btn--primary-2" type="button" data-cart>
+                                                            Add to cart
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <ul class="wishlist-card__actions">
+                                                    <li class="wishlist-card__actions-item">
+                                                        <button class="btn btn--edit" title="delete" data-delete>
+                                                            <svg width="10" height="10" aria-hidden="true">
+                                                                <use xlink:href="img/sprite.svg#icon-close"></use>
+                                                            </svg>
+                                                            <span class="sr-only">delete</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="wishlist-card__actions-item">
+                                                        <button class="btn btn--edit" title="edit">
+                                                            <svg width="10" height="10" aria-hidden="true">
+                                                                <use xlink:href="img/sprite.svg#icon-pen"></use>
+                                                            </svg>
+                                                            <span class="sr-only">edit</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </article>
+                                        </li>
+                                        <li class="wishlist__item">
+                                            <article class="wishlist-card" data-id="02">
+                                                <div class="wishlist-card__inner">
+                                                    <a class="wishlist-card__img" href="/product.html">
+                                                        <img src="img/cards/02.jpg" width="167" height="219" alt="dress">
+                                                    </a>
+                                                    <a class="wishlist-card__link" href="/product.html" title="Angels malu zip jeans slim black used">
+                                                        <h2 class="wishlist-card__title">
+                                                            Angels malu zip jeans slim black used
+                                                        </h2>
+                                                    </a>
+                                                    <div class="wishlist-card__price">120 eur</div>
+                                                    <div class="wishlist-card__bottom">
+                                                        <label class="wishlist-card__label">
+                                                            <input class="wishlist-card__input" type="number" value="1" min="1" max="99" data-counter>
+                                                        </label>
+                                                        <button class="wishlist-card__btn btn btn--primary-2" type="button" data-cart>
+                                                            Add to cart
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <ul class="wishlist-card__actions">
+                                                    <li class="wishlist-card__actions-item">
+                                                        <button class="btn btn--edit" title="delete" data-delete>
+                                                            <svg width="10" height="10" aria-hidden="true">
+                                                                <use xlink:href="img/sprite.svg#icon-close"></use>
+                                                            </svg>
+                                                            <span class="sr-only">delete</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="wishlist-card__actions-item">
+                                                        <button class="btn btn--edit" title="edit">
+                                                            <svg width="10" height="10" aria-hidden="true">
+                                                                <use xlink:href="img/sprite.svg#icon-pen"></use>
+                                                            </svg>
+                                                            <span class="sr-only">edit</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </article>
+                                        </li>
+                                        <li class="wishlist__item">
+                                            <article class="wishlist-card" data-id="03">
+                                                <div class="wishlist-card__inner">
+                                                    <a class="wishlist-card__img" href="/product.html">
+                                                        <img src="img/cards/03.jpg" width="167" height="219" alt="dress">
+                                                    </a>
+                                                    <a class="wishlist-card__link" href="/product.html" title="Angels malu zip jeans slim black used">
+                                                        <h2 class="wishlist-card__title">
+                                                            Angels malu zip jeans slim black used
+                                                        </h2>
+                                                    </a>
+                                                    <div class="wishlist-card__price">150 eur</div>
+                                                    <div class="wishlist-card__bottom">
+                                                        <label class="wishlist-card__label">
+                                                            <input class="wishlist-card__input" type="number" value="1" min="1" max="99" data-counter>
+                                                        </label>
+                                                        <button class="wishlist-card__btn btn btn--primary-2" type="button" data-cart>
+                                                            Add to cart
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <ul class="wishlist-card__actions">
+                                                    <li class="wishlist-card__actions-item">
+                                                        <button class="btn btn--edit" title="delete" data-delete>
+                                                            <svg width="10" height="10" aria-hidden="true">
+                                                                <use xlink:href="img/sprite.svg#icon-close"></use>
+                                                            </svg>
+                                                            <span class="sr-only">delete</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="wishlist-card__actions-item">
+                                                        <button class="btn btn--edit" title="edit">
+                                                            <svg width="10" height="10" aria-hidden="true">
+                                                                <use xlink:href="img/sprite.svg#icon-pen"></use>
+                                                            </svg>
+                                                            <span class="sr-only">edit</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </article>
+                                        </li>
+                                        <li class="wishlist__item">
+                                            <article class="wishlist-card" data-id="04">
+                                                <div class="wishlist-card__inner">
+                                                    <a class="wishlist-card__img" href="/product.html">
+                                                        <img src="img/cards/04.jpg" width="167" height="219" alt="dress">
+                                                    </a>
+                                                    <a class="wishlist-card__link" href="/product.html" title="Angels malu zip jeans slim black used">
+                                                        <h2 class="wishlist-card__title">
+                                                            Angels malu zip jeans slim black used
+                                                        </h2>
+                                                    </a>
+                                                    <div class="wishlist-card__price">200 eur</div>
+                                                    <div class="wishlist-card__bottom">
+                                                        <label class="wishlist-card__label">
+                                                            <input class="wishlist-card__input" type="number" value="1" min="1" max="99" data-counter>
+                                                        </label>
+                                                        <button class="wishlist-card__btn btn btn--primary-2" type="button" data-cart>
+                                                            Add to cart
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <ul class="wishlist-card__actions">
+                                                    <li class="wishlist-card__actions-item">
+                                                        <button class="btn btn--edit" title="delete" data-delete>
+                                                            <svg width="10" height="10" aria-hidden="true">
+                                                                <use xlink:href="img/sprite.svg#icon-close"></use>
+                                                            </svg>
+                                                            <span class="sr-only">delete</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="wishlist-card__actions-item">
+                                                        <button class="btn btn--edit" title="edit">
+                                                            <svg width="10" height="10" aria-hidden="true">
+                                                                <use xlink:href="img/sprite.svg#icon-pen"></use>
+                                                            </svg>
+                                                            <span class="sr-only">edit</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </article>
+                                        </li>
+                                        <li class="wishlist__item">
+                                            <article class="wishlist-card" data-id="05">
+                                                <div class="wishlist-card__inner">
+                                                    <a class="wishlist-card__img" href="/product.html">
+                                                        <img src="img/cards/05.jpg" width="167" height="219" alt="dress">
+                                                    </a>
+                                                    <a class="wishlist-card__link" href="/product.html" title="Angels malu zip jeans slim black used">
+                                                        <h2 class="wishlist-card__title">
+                                                            Angels malu zip jeans slim black used
+                                                        </h2>
+                                                    </a>
+                                                    <div class="wishlist-card__price">70 eur</div>
+                                                    <div class="wishlist-card__bottom">
+                                                        <label class="wishlist-card__label">
+                                                            <input class="wishlist-card__input" type="number" value="1" min="1" max="99" data-counter>
+                                                        </label>
+                                                        <button class="wishlist-card__btn btn btn--primary-2" type="button" data-cart>
+                                                            Add to cart
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <ul class="wishlist-card__actions">
+                                                    <li class="wishlist-card__actions-item">
+                                                        <button class="btn btn--edit" title="delete" data-delete>
+                                                            <svg width="10" height="10" aria-hidden="true">
+                                                                <use xlink:href="img/sprite.svg#icon-close"></use>
+                                                            </svg>
+                                                            <span class="sr-only">delete</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="wishlist-card__actions-item">
+                                                        <button class="btn btn--edit" title="edit">
+                                                            <svg width="10" height="10" aria-hidden="true">
+                                                                <use xlink:href="img/sprite.svg#icon-pen"></use>
+                                                            </svg>
+                                                            <span class="sr-only">edit</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </article>
+                                        </li>
+                                        <li class="wishlist__item">
+                                            <article class="wishlist-card" data-id="06">
+                                                <div class="wishlist-card__inner">
+                                                    <a class="wishlist-card__img" href="/product.html">
+                                                        <img src="img/cards/06.jpg" width="167" height="219" alt="dress">
+                                                    </a>
+                                                    <a class="wishlist-card__link" href="/product.html" title="Angels malu zip jeans slim black used">
+                                                        <h2 class="wishlist-card__title">
+                                                            Angels malu zip jeans slim black used
+                                                        </h2>
+                                                    </a>
+                                                    <div class="wishlist-card__price">40 eur</div>
+                                                    <div class="wishlist-card__bottom">
+                                                        <label class="wishlist-card__label">
+                                                            <input class="wishlist-card__input" type="number" value="1" min="1" max="99" data-counter>
+                                                        </label>
+                                                        <button class="wishlist-card__btn btn btn--primary-2" type="button" data-cart>
+                                                            Add to cart
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                                <ul class="wishlist-card__actions">
+                                                    <li class="wishlist-card__actions-item">
+                                                        <button class="btn btn--edit" title="delete" data-delete>
+                                                            <svg width="10" height="10" aria-hidden="true">
+                                                                <use xlink:href="img/sprite.svg#icon-close"></use>
+                                                            </svg>
+                                                            <span class="sr-only">delete</span>
+                                                        </button>
+                                                    </li>
+                                                    <li class="wishlist-card__actions-item">
+                                                        <button class="btn btn--edit" title="edit">
+                                                            <svg width="10" height="10" aria-hidden="true">
+                                                                <use xlink:href="img/sprite.svg#icon-pen"></use>
+                                                            </svg>
+                                                            <span class="sr-only">edit</span>
+                                                        </button>
+                                                    </li>
+                                                </ul>
+                                            </article>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('blocks/benefits.html')
+            <div class="overlay"></div>
+        </div>
+        @@include('blocks/footer.html')
+    </div>
+    <script src="./js/wishlist.bundle.js"></script>
+</body>
+
+</html>

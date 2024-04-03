@@ -1,0 +1,726 @@
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+
+html {
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+    background-color: var(--color-white);
+    color: var(--color-black);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.header,
+.footer {
+    flex-grow: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-top: 94.7px;
+
+    @include mq("tablet") {
+        padding-top: 60px;
+    }
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.lock {
+    overflow: hidden;
+}
+
+.container {
+    max-width: var(--container-width);
+    padding: 0 var(--container-padding);
+    margin: 0 auto;
+}
+
+.container-middle {
+    max-width: 1480px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container-small {
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.container-right {
+    padding-left: calc((100% - var(--container-width)) / 2 + var(--container-padding));
+
+    @include mq("desktop") {
+        padding-left: var(--container-padding);
+        padding-right: var(--container-padding);
+    }
+}
+
+.container-left {
+    padding-right: calc((100% - var(--container-width)) / 2 + var(--container-padding));
+
+    @include mq("desktop") {
+        padding-right: var(--container-padding);
+        padding-left: var(--container-padding);
+    }
+}
+
+.hidden-scrollbar {
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+.custom-scrollbar {
+    &::-webkit-scrollbar {
+        width: 3px;
+        background-color: #f9f9fd;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 0;
+        background-color: gray;
+    }
+
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+        border-radius: 0;
+        background-color: #f9f9fd;
+    }
+}
+
+.checkbox-hidden {
+    @include checkbox-hidden;
+}
+
+.checkbox-size {
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    &__input {
+        &:checked+.checkbox-size__check {
+            color: var(--black-color);
+            box-shadow: 0 0 0 2px var(--black-color);
+        }
+
+        // &:focus + .checkbox-size__check {
+        //     box-shadow: 0 0 0 2px darkcyan;
+        // }
+    }
+
+    &__check {
+        @include flex-all-center;
+        color: var(--gray1-color);
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        box-shadow: 0 0 0 1px var(--silver-color);
+        transition:
+            box-shadow var(--transition),
+            color var(--transition);
+
+        @include hover {
+            color: var(--black-color);
+            box-shadow: 0 0 0 2px var(--black-color);
+        }
+    }
+}
+
+.checkbox-color {
+    cursor: pointer;
+
+    &__input {
+        &:checked+.checkbox-color__check {
+            box-shadow: 0 0 0 2px var(--black-color);
+        }
+
+        // &:focus + .checkbox-color__check {
+        //     box-shadow: 0 0 0 2px var(--black-color);
+        // }
+    }
+
+    &__check {
+        display: block;
+        width: 27px;
+        height: 27px;
+        border: 3px solid var(--light-color);
+        transition:
+            box-shadow var(--transition),
+            opacity var(--transition);
+    }
+
+    &__check-white {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #000;
+    }
+
+    @include hover {
+        .checkbox-color__check {
+            box-shadow: 0 0 0 2px var(--black-color);
+        }
+    }
+
+    &:active {
+        .checkbox-color__check {
+            opacity: 0.7;
+        }
+    }
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+}
+
+.logo {
+    display: inline-block;
+    padding: 5px;
+    transition:
+        box-shadow var(--transition),
+        opacity var(--transition);
+
+    @include hover {
+        opacity: 0.8;
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px var(--white-rgba-60);
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
+}
+
+.link {
+    padding: 1px 3px;
+    margin: 0 -3px;
+    transition:
+        color var(--transition),
+        box-shadow var(--transition),
+        opacity var(--transition);
+
+    @include hover {
+        color: var(--accent-color);
+
+        svg {
+            stroke: var(--accent-color);
+        }
+    }
+
+    &:focus {
+        box-shadow: 0 0 0 2px var(--white-rgba-60);
+    }
+
+    &:active {
+        opacity: 0.8;
+    }
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    color: var(--black-color);
+    text-transform: uppercase;
+    padding: 15px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    transition:
+        color var(--transition),
+        background-color var(--transition),
+        opacity var(--transition),
+        box-shadow var(--transition),
+        border var(--transition);
+
+    &--primary {
+        @include adaptiv-font(18, 10);
+        min-width: 175px;
+        padding: 17px;
+        border: 2px solid var(--black-color);
+
+        @include mq("tablet-sm") {
+            min-width: 85px;
+            padding: 9px 7px;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 3px var(--black-rgba-20);
+        }
+
+        @include hover {
+            background-color: var(--black-color);
+            color: var(--light-color);
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    &--primary-2 {
+        background-color: var(--black-color);
+        color: var(--light-color);
+        font-size: 14px;
+        padding: 18px;
+        border: 1px solid transparent;
+
+        &:focus {
+            box-shadow: 0 0 0 1px black;
+            border: 1px solid white;
+        }
+
+        @include hover {
+            background-color: var(--accent-color);
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+
+    &--primary-white {
+        @include adaptiv-font(18, 10);
+        min-width: 175px;
+        border: 2px solid var(--light-color);
+        color: var(--light-color);
+
+        &:focus {
+            box-shadow: 0 0 0 3px var(--white-rgba-60);
+        }
+
+        @include hover {
+            background-color: var(--light-color);
+            color: var(--black-color);
+        }
+
+        @include mq("tablet-sm") {
+            min-width: 85px;
+            padding: 9px 7px;
+        }
+    }
+
+    &--secondary {
+        background-color: var(--light-blue-hover);
+        box-shadow: 0 0 0 1px inset var(--silver-color);
+        color: var(--gray1-color);
+        font-size: 14px;
+        padding: 18px;
+
+        &:focus {
+            box-shadow: 0 0 0 1px var(--black-color);
+        }
+
+        @include hover {
+            background-color: var(--light-color);
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    &--with-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &--edit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        background-color: var(--main-color);
+        font-size: 14px;
+        line-height: 1;
+        font-weight: 400;
+        padding: 5px 6px;
+        min-width: 24px;
+        min-height: 24px;
+        text-transform: capitalize;
+        border: 1px solid transparent;
+
+        svg {
+            fill: var(--black-color);
+            pointer-events: none;
+        }
+
+        &:focus {
+            border: 1px solid var(--black-color);
+        }
+
+        @include hover {
+            background-color: var(--link-water-color);
+        }
+
+        &:active {
+            opacity: 0.6;
+        }
+
+        @include mq("tablet") {
+            min-width: 30px;
+            min-height: 30px;
+        }
+    }
+}
+
+.full-width {
+    width: 100%;
+}
+
+.lines-decor {
+    padding: 20px 60px 0 0;
+
+    @include mq("desktop-lg") {
+        padding: 20px 0 0 0;
+    }
+
+    @include mq("tablet-sm") {
+        padding: 0;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: var(--black-color);
+        top: 0;
+        right: 0;
+
+        @include mq("tablet") {
+            display: none;
+        }
+    }
+
+    &::before {
+        width: 85%;
+        height: 2px;
+    }
+
+    &::after {
+        width: 2px;
+        height: 25%;
+    }
+}
+
+.title-sm {
+    @include adaptiv-font(24, 16);
+    font-weight: 400;
+}
+
+.title-md {
+    @include adaptiv-font(48, 18);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.title-lg {
+    @include adaptiv-font(56, 14);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.popular-slider {
+    margin-bottom: 115px;
+}
+
+.color-selection {
+    display: flex;
+    gap: 10px;
+    margin-left: 2px;
+
+    &__item {
+        width: 27px;
+        height: 27px;
+    }
+
+    &__link {
+        display: block;
+        width: 27px;
+        height: 27px;
+        border: 3px solid var(--light-color);
+        transition:
+            box-shadow var(--transition),
+            opacity var(--transition);
+
+        @include hover {
+            box-shadow: 0 0 0 2px var(--gray1-color);
+        }
+
+        &:active {
+            opacity: 0.8;
+        }
+    }
+
+    &__link--current {
+        box-shadow: 0 0 0 2px var(--black-color);
+    }
+
+    &__white-color {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #000;
+    }
+}
+
+.margin-bottom {
+    @include margin-bottom(40, 15);
+}
+
+.form {
+    &__label {
+        font-family: "Roboto", sans-serif;
+        color: var(--black2-color);
+        display: flex;
+        justify-content: space-between;
+        gap: 15px;
+
+        @include hover {
+            .form__input::placeholder {
+                color: var(--black-color);
+            }
+        }
+
+        @include mq("mobile") {
+            flex-direction: column;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        max-width: 443px;
+        color: inherit;
+        font-size: 16px;
+        padding: 10px 14px;
+        box-shadow: 0 0 0 1px var(--silver-color);
+
+        &::placeholder {
+            transition: color var(--transition);
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 1px var(--black-color);
+        }
+
+        @include hover {}
+
+        @include mq("tablet") {
+            max-width: 70%;
+        }
+
+        @include mq("mobile") {
+            max-width: 100%;
+        }
+    }
+
+    &__label,
+    &__input {
+        @include mq("mobile") {
+            font-size: 14px;
+        }
+    }
+
+    &__select-wrap {
+        min-width: 443px;
+
+        @include mq("tablet") {
+            min-width: 70%;
+        }
+    }
+}
+
+.flex-jcc {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jc-flex-end {
+    justify-content: flex-end;
+}
+
+.checkbox {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+
+    &__input {
+        &:checked+.checkbox__modified {
+            background-image: url("../img/on-checkbox.svg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 0 0 1px var(--black-color);
+        }
+
+        &:focus+.checkbox__modified {
+            background-color: var(--black-rgba-20);
+        }
+    }
+
+    &__modified {
+        flex-shrink: 0;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-top: 2px;
+        box-shadow: 0 0 0 1px var(--gray1-color);
+        transition:
+            box-shadow var(--transition),
+            background-color var(--transition);
+    }
+}
+
+.overlay {
+    // display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 98;
+    background-color: var(--black-rgba-50);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity var(--transition),
+        visibility var(--transition);
+
+    &.is-active {
+        // display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.overlay-card {
+    &::after {
+        @include pseudo;
+        background-color: var(--black-rgba-20);
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition:
+            opacity var(--transition),
+            visibility var(--transition);
+    }
+}
+
+.filter-mobile-btn {
+    width: 100%;
+    line-height: 1;
+    padding: 11px;
+    margin-bottom: 20px;
+    background-color: var(--light-blue-hover);
+    border: 1px solid var(--silver-color);
+    text-transform: uppercase;
+    transition:
+        background-color var(--transition),
+        border var(--transition);
+    position: relative;
+    z-index: 11;
+    display: none;
+
+    &:focus {
+        border: 1px solid var(--light-color);
+        box-shadow: 0 0 0 2px var(--black-rgba-50);
+    }
+
+    &:active {
+        background-color: var(--light-blue-hover);
+    }
+
+    &.is-active {
+        .filter-mobile-btn__icon {
+            transform: rotate(180deg);
+        }
+    }
+
+    @include mq("tablet") {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    @include mq("tablet-sm") {
+        margin-bottom: 10px;
+    }
+
+    @include mq("mobile") {}
+
+    &__icon {
+        transition: var(--transition);
+    }
+}
+
+.dashboard-menu-btn {
+    &.is-active {
+        background-color: var(--black-color);
+        color: var(--light-color);
+
+        svg {
+            fill: var(--light-color);
+        }
+    }
+}
+
+.sign-in-btn {
+    color: var(--light-color);
+}
+
+.btns-mobile {
+    display: none;
+
+    @include mq("tablet") {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        order: 2;
+    }
+
+    &__btn {
+        padding: 15px;
+    }
+}

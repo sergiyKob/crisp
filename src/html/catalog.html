@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('blocks/head.html', {
+"pageTitle": "Catalog" })
+
+<body class="body">
+    <div class="wrapper">
+        @@include('blocks/header.html')
+        <div class="main">
+            <h1 class="sr-only">catalog</h1>
+            @@include('blocks/baner-top.html')
+            <nav class="breadcrumbs">
+                <div class="container">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="/">Home</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link" href="#">Womens Dress</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link breadcrumbs__link--current">Best Chose</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <section class="catalog">
+                <div class="container">
+                    <div class="catalog__inner">
+                        <aside class="catalog__sidebar filter">
+                            <div class="filters-selected">
+                                <div class="filters-selected__top">
+                                    <h2 class="filters-selected__title">
+                                        Filter
+                                    </h2>
+                                    <button class="filters-selected__btn-reset" type="button">
+                                        <svg class="filters-selected__reset-icon" width="10" height="10">
+                                            <use xlink:href="img/sprite.svg#icon-close"></use>
+                                        </svg>
+                                        reset all
+                                    </button>
+                                </div>
+                                <ul class="filters-selected__list">
+                                    <li class="filters-selected__item">
+                                        <h3 class="filters-selected__item-title title-sm">Brand:</h3>
+                                        <div class="filters-selected__item-box">
+                                            <a class="filters-selected__item-link" href="#">
+                                                <svg class="filters-selected__reset-icon" width="10" height="10">
+                                                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                                                </svg>
+                                                bardot
+                                            </a>
+                                            <a class="filters-selected__item-link" href="#">
+                                                <svg class="filters-selected__reset-icon" width="10" height="10">
+                                                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                                                </svg>
+                                                Cooper
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="filters-selected__item">
+                                        <h3 class="filters-selected__item-title title-sm">Size (Inches):</h3>
+                                        <div class="filters-selected__item-box">
+                                            <a class="filters-selected__item-link" href="#">
+                                                <svg class="filters-selected__reset-icon" width="10" height="10">
+                                                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                                                </svg>
+                                                W32
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="filters-selected__item">
+                                        <h3 class="filters-selected__item-title title-sm">Dress length:</h3>
+                                        <div class="filters-selected__item-box">
+                                            <a class="filters-selected__item-link" href="#">
+                                                <svg class="filters-selected__reset-icon" width="10" height="10">
+                                                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                                                </svg>
+                                                hight low
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="filters-selected__item">
+                                        <h3 class="filters-selected__item-title title-sm">Color:</h3>
+                                        <div class="filters-selected__item-box">
+                                            <a class="filters-selected__item-link" href="#">
+                                                <svg class="filters-selected__reset-icon" width="10" height="10">
+                                                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                                                </svg>
+                                                <label class="checkbox-color">
+                                                    <input class="checkbox-color__input checkbox-hidden"
+                                                           type="checkbox">
+                                                    <span class="checkbox-color__check color-selection__link--current"
+                                                          style="background-color: green;"></span>
+                                                </label>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li class="filters-selected__item">
+                                        <h3 class="filters-selected__item-title title-sm">Price Range:</h3>
+                                        <div class="filters-selected__item-box">
+                                            <a class="filters-selected__item-link" href="#">
+                                                <svg class="filters-selected__reset-icon" width="10" height="10">
+                                                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                                                </svg>
+                                                0.00 EUR – 250 EUR
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <form class="filter__form">
+                                <ul class="filter__list">
+                                    <li class="filter__item">
+                                        <button class="filter__title title-sm is-active" type="button"
+                                                data-title="filter-title">Brand</button>
+                                        <div class="filter__content is-open" data-content="filter-content">
+                                            <div class="filter__brand">
+                                                <label class="filter__label">
+                                                    <input class="filter__input checkbox-hidden" type="checkbox">
+                                                    <span class="filter__checkbox"></span>
+                                                    state
+                                                </label>
+                                                <label class="filter__label">
+                                                    <input class="filter__input checkbox-hidden" type="checkbox">
+                                                    <span class="filter__checkbox"></span>
+                                                    Cooper
+                                                </label>
+                                                <label class="filter__label">
+                                                    <input class="filter__input checkbox-hidden" type="checkbox">
+                                                    <span class="filter__checkbox"></span>
+                                                    bardot
+                                                </label>
+                                                <label class="filter__label">
+                                                    <input class="filter__input checkbox-hidden" type="checkbox">
+                                                    <span class="filter__checkbox"></span>
+                                                    alfani
+                                                </label>
+                                                <label class="filter__label">
+                                                    <input class="filter__input checkbox-hidden" type="checkbox">
+                                                    <span class="filter__checkbox"></span>
+                                                    cece
+                                                </label>
+                                                <label class="filter__label">
+                                                    <input class="filter__input checkbox-hidden" type="checkbox">
+                                                    <span class="filter__checkbox"></span>
+                                                    donna ricco
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="filter__item">
+                                        <button class="filter__title title-sm is-active" type="button"
+                                                data-title="filter-title">Size (Inches)</button>
+                                        <div class="filter__content is-open">
+                                            <div class="filter__size">
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">osfa</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w26</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w27</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w28</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w29</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w30</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w31</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w32</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w33</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w34</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w35</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w36</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w37</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w38</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w39</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w40</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w41</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w42</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w43</span>
+                                                </label>
+                                                <label class="checkbox-size">
+                                                    <input class="checkbox-size__input checkbox-hidden" type="checkbox">
+                                                    <span class="checkbox-size__check">w44</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="filter__item">
+                                        <button class="filter__title title-sm is-active" type="button"
+                                                data-title="filter-title">Dress length</button>
+                                        <div class="filter__content is-open">
+                                            <div class="filter__lenght">
+                                                <label class="filter__label">
+                                                    <input class="filter__input checkbox-hidden" type="checkbox">
+                                                    <span class="filter__checkbox"></span>
+                                                    short
+                                                </label>
+                                                <label class="filter__label">
+                                                    <input class="filter__input checkbox-hidden" type="checkbox">
+                                                    <span class="filter__checkbox"></span>
+                                                    knee length
+                                                </label>
+                                                <label class="filter__label">
+                                                    <input class="filter__input checkbox-hidden" type="checkbox">
+                                                    <span class="filter__checkbox"></span>
+                                                    hight low
+                                                </label>
+                                                <label class="filter__label">
+                                                    <input class="filter__input checkbox-hidden" type="checkbox">
+                                                    <span class="filter__checkbox"></span>
+                                                    long
+                                                </label>
+                                                <label class="filter__label">
+                                                    <input class="filter__input checkbox-hidden" type="checkbox">
+                                                    <span class="filter__checkbox"></span>
+                                                    midi
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="filter__item">
+                                        <button class="filter__title title-sm is-active" type="button"
+                                                data-title="filter-title">Color</button>
+                                        <div class="filter__content is-open">
+                                            <div class="filter__color">
+                                                <label class="checkbox-color">
+                                                    <input class="checkbox-color__input checkbox-hidden"
+                                                           type="checkbox">
+                                                    <span class="checkbox-color__check"
+                                                          style="background-color: white;">
+                                                        <span class="checkbox-color__check-white"></span>
+                                                    </span>
+                                                </label>
+                                                <label class="checkbox-color">
+                                                    <input class="checkbox-color__input checkbox-hidden"
+                                                           type="checkbox">
+                                                    <span class="checkbox-color__check"
+                                                          style="background-color: blue;"></span>
+                                                </label>
+                                                <label class="checkbox-color">
+                                                    <input class="checkbox-color__input checkbox-hidden"
+                                                           type="checkbox">
+                                                    <span class="checkbox-color__check"
+                                                          style="background-color: blueviolet;"></span>
+                                                </label>
+                                                <label class="checkbox-color">
+                                                    <input class="checkbox-color__input checkbox-hidden"
+                                                           type="checkbox">
+                                                    <span class="checkbox-color__check"
+                                                          style="background-color: green;"></span>
+                                                </label>
+                                                <label class="checkbox-color">
+                                                    <input class="checkbox-color__input checkbox-hidden"
+                                                           type="checkbox">
+                                                    <span class="checkbox-color__check"
+                                                          style="background-color: red;"></span>
+                                                </label>
+                                                <label class="checkbox-color">
+                                                    <input class="checkbox-color__input checkbox-hidden"
+                                                           type="checkbox">
+                                                    <span class="checkbox-color__check"
+                                                          style="background-color: gray;"></span>
+                                                </label>
+                                                <label class="checkbox-color">
+                                                    <input class="checkbox-color__input checkbox-hidden"
+                                                           type="checkbox">
+                                                    <span class="checkbox-color__check"
+                                                          style="background-color: blueviolet;"></span>
+                                                </label>
+                                                <label class="checkbox-color">
+                                                    <input class="checkbox-color__input checkbox-hidden"
+                                                           type="checkbox">
+                                                    <span class="checkbox-color__check"
+                                                          style="background-color: green;"></span>
+                                                </label>
+                                                <label class="checkbox-color">
+                                                    <input class="checkbox-color__input checkbox-hidden"
+                                                           type="checkbox">
+                                                    <span class="checkbox-color__check"
+                                                          style="background-color: red;"></span>
+                                                </label>
+                                                <label class="checkbox-color">
+                                                    <input class="checkbox-color__input checkbox-hidden"
+                                                           type="checkbox">
+                                                    <span class="checkbox-color__check"
+                                                          style="background-color: aquamarine"></span>
+                                                </label>
+                                                <label class="checkbox-color">
+                                                    <input class="checkbox-color__input checkbox-hidden"
+                                                           type="checkbox">
+                                                    <span class="checkbox-color__check"
+                                                          style="background-color: silver"></span>
+                                                </label>
+                                                <label class="checkbox-color">
+                                                    <input class="checkbox-color__input checkbox-hidden"
+                                                           type="checkbox">
+                                                    <span class="checkbox-color__check"
+                                                          style="background-color: yellow;"></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="filter__item">
+                                        <button class="filter__title title-sm is-active" type="button"
+                                                data-title="filter-title">Price Range</button>
+                                        <div class="filter__content is-open">
+                                            <div class="range-slider">
+                                                <div class="range-slider__inputs">
+                                                    <label class="range-slider__label">
+                                                        <input id="range-slider-input-0" class="range-slider__input"
+                                                               type="number" min="0" max="999" placeholder="0">
+                                                        <span class="range-slider__currency">eur</span>
+                                                    </label>
+                                                    <label class="range-slider__label">
+                                                        <input id="range-slider-input-1" class="range-slider__input"
+                                                               type="number" min="0" max="250" placeholder="250">
+                                                        <span class="range-slider__currency">eur</span>
+                                                    </label>
+                                                </div>
+                                                <div id="range-slider"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="filter__btn-wrap">
+                                    <button class="filter__btn btn btn--secondary" type="submit">apply</button>
+                                </div>
+                            </form>
+                            <div class="filter__descr">
+                                <p class="filter__descr-title title-sm">About Dresses</p>
+                                <p class="filter__descr-text">
+                                    Every day we’re gonna be dropping the latest trends to help you nail every Summer
+                                    sitch.
+                                    Whether it’s a graduation, your
+                                    mate's wedding, or just a cute day at the races with the gals, our occasion dresses
+                                    have
+                                    got you covered. Not looking
+                                    for something fancy? No stress. We’ve got day dresses for days (aka bodycon dresses,
+                                    t-shirt dresses, oversized shirt
+                                    dresses).
+                                </p>
+                            </div>
+                        </aside>
+
+                        <div class="catalog__content">
+                            <button class="filter-mobile-btn">
+                                filter
+                                <svg class="filter-mobile-btn__icon" width="19" height="11">
+                                    <use xlink:href="img/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </button>
+
+                            <div class="catalog__sort">
+                                <div class="catalog__sort-item-1">
+                                    <select class="multi-default">
+                                        <option selected value="#">price (High to low)</option>
+                                        <option value="#">price (low to High)</option>
+                                    </select>
+                                </div>
+                                <div class="catalog__sort-item-2">
+                                    <select class="multi-default">
+                                        <option value="#">12</option>
+                                        <option value="#">24</option>
+                                        <option selected value="#">48</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid-cards">
+                                <ul class="grid-cards__list">
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">top women</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <span class="card__label">-30%</span>
+                                            <div class="card__price">
+                                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                                <div class="card__price-old">199.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/02.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">best sellers</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim black used
+                                                </a>
+                                            </h3>
+                                            <div class="card__price">
+                                                <div class="card__price-current">235.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/03.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">top women</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <div class="card__price">
+                                                <div class="card__price-current">109.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/04.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">trending</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <span class="card__label">-30%</span>
+                                            <div class="card__price">
+                                                <div class="card__price-current card__price-new">104.00 eur</div>
+                                                <div class="card__price-old">149.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/05.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">top women</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <div class="card__price">
+                                                <div class="card__price-current">99.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/06.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">top women</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <span class="card__label">-30%</span>
+                                            <div class="card__price">
+                                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                                <div class="card__price-old">199.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/07.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">new arivals</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels
+                                                </a>
+                                            </h3>
+                                            <span class="card__label">-50%</span>
+                                            <div class="card__price">
+                                                <div class="card__price-current card__price-new">49.00 eur</div>
+                                                <div class="card__price-old">99.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">top women</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <span class="card__label">-30%</span>
+                                            <div class="card__price">
+                                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                                <div class="card__price-old">199.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">top women</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <span class="card__label">-30%</span>
+                                            <div class="card__price">
+                                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                                <div class="card__price-old">199.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/02.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">best sellers</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim black used
+                                                </a>
+                                            </h3>
+                                            <div class="card__price">
+                                                <div class="card__price-current">235.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/03.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">top women</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <div class="card__price">
+                                                <div class="card__price-current">109.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/04.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">trending</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <span class="card__label">-30%</span>
+                                            <div class="card__price">
+                                                <div class="card__price-current card__price-new">104.00 eur</div>
+                                                <div class="card__price-old">149.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="baner baner--black">
+                                <div class="baner__inner" style="background-image: url('img/baners/bg-72.jpg');">
+                                    <div class="baner__content content-baner">
+                                        <h2 class="content-baner__title title-lg">shoping without limits.</h2>
+                                        <p class="content-baner__descr">Choose the best option for you, and it does not matter whether you are.</p>
+                                        <a class="btn btn--primary-white" href="#">shop now</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid-cards">
+                                <ul class="grid-cards__list">
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">top women</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <span class="card__label">-30%</span>
+                                            <div class="card__price">
+                                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                                <div class="card__price-old">199.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/02.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">best sellers</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim black used
+                                                </a>
+                                            </h3>
+                                            <div class="card__price">
+                                                <div class="card__price-current">235.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/03.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">top women</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <div class="card__price">
+                                                <div class="card__price-current">109.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/04.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">trending</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <span class="card__label">-30%</span>
+                                            <div class="card__price">
+                                                <div class="card__price-current card__price-new">104.00 eur</div>
+                                                <div class="card__price-old">149.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/05.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">top women</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <div class="card__price">
+                                                <div class="card__price-current">99.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/06.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">top women</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <span class="card__label">-30%</span>
+                                            <div class="card__price">
+                                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                                <div class="card__price-old">199.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/07.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">new arivals</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels
+                                                </a>
+                                            </h3>
+                                            <span class="card__label">-50%</span>
+                                            <div class="card__price">
+                                                <div class="card__price-current card__price-new">49.00 eur</div>
+                                                <div class="card__price-old">99.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">top women</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <span class="card__label">-30%</span>
+                                            <div class="card__price">
+                                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                                <div class="card__price-old">199.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/01.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">top women</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <span class="card__label">-30%</span>
+                                            <div class="card__price">
+                                                <div class="card__price-current card__price-new">139.00 eur</div>
+                                                <div class="card__price-old">199.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/02.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">best sellers</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim black used
+                                                </a>
+                                            </h3>
+                                            <div class="card__price">
+                                                <div class="card__price-current">235.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/03.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">top women</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <div class="card__price">
+                                                <div class="card__price-current">109.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                    <li class="grid-cards__item">
+                                        <article class="card">
+                                            <a class="card__img" href="/product.html">
+                                                <img loading="lazy" src="img/cards/04.jpg" width="344" height="450" title="Angels malu zip jeans slim black used" alt="dress">
+                                            </a>
+                                            <a class="card__categories" href="#">trending</a>
+                                            <h3 class="card__title">
+                                                <a class="card__link" href="#" title="Angels malu zip jeans slim black used">
+                                                    Angels malu zip jeans slim Angels malu zip jeans slim Angels malu
+                                                    zip jeans slim Angels malu zip jeans slim malu zip jeans slim
+                                                </a>
+                                            </h3>
+                                            <span class="card__label">-30%</span>
+                                            <div class="card__price">
+                                                <div class="card__price-current card__price-new">104.00 eur</div>
+                                                <div class="card__price-old">149.00 eur</div>
+                                            </div>
+                                            <ul class="color-selection">
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link color-selection__link--current" href="#" title="blue" style="background-color: blue;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="red" style="background-color: red;"></a>
+                                                </li>
+                                                <li class="color-selection__item">
+                                                    <a class="color-selection__link" href="#" title="white" style="background-color: white;">
+                                                        <div class="color-selection__white-color"></div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </article>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('blocks/benefits.html')
+            <div class="overlay"></div>
+        </div>
+        @@include('blocks/footer.html')
+    </div>
+    <script src="./js/catalog.bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+.baner {
+    @include padding-bottom(60, 20);
+
+    &--catalog-top {
+        margin: 18px 0;
+        padding-bottom: 0;
+
+        @include mq('tablet') {
+            margin-bottom: 0;
+        }
+
+    }
+
+    &--black {
+        color: var(--light-color);
+
+        .baner__inner {
+            @include padding-left(180, 10);
+        }
+
+        .content-baner__title {
+
+            &::before,
+            &::after {
+                background-color: var(--light-color);
+            }
+        }
+    }
+
+    &__inner {
+        @include padding-top(100, 15);
+        @include padding-bottom(100, 15);
+        @include padding-left(250, 10);
+        position: relative;
+        background-color: var(--silver-color);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom right;
+        display: flex;
+        align-items: center;
+    }
+}

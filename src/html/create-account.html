@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('blocks/head.html', {
+"pageTitle": "Create account"
+})
+
+<body class="body">
+    <div class="wrapper">
+        @@include('blocks/header.html')
+        <div class="main">
+            <section class="profile">
+                <div class="container-middle">
+                    <div class="profile__breadcrumbs">
+                        <nav class="breadcrumbs flex-jcc">
+                            <ul class="breadcrumbs__list">
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link" href="/">Home</a>
+                                </li>
+                                <li class="breadcrumbs__item">
+                                    <a class="breadcrumbs__link breadcrumbs__link--current">Create New Customer
+                                        Account</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <h1 class="profile__title">
+                        Create New Customer Account
+                    </h1>
+                    <div class="profile__body">
+                        <div class="create-account">
+                            <form class="create-account__form form">
+                                <section class="create-account__personal-info">
+                                    <h2 class="create-account__title title-sm">Personal Information</h2>
+                                    <label class="create-account__label form__label">
+                                        First name *
+                                        <input class="create-account__input form__input" type="text" placeholder="David"
+                                            required>
+                                    </label>
+                                    <label class="create-account__label form__label">
+                                        Last Name *
+                                        <input class="create-account__input form__input" type="text"
+                                            placeholder="Backham" required>
+                                    </label>
+                                    <div class="create-account__row">
+                                        <label class="checkbox">
+                                            <input class="checkbox__input checkbox-hidden" type="checkbox">
+                                            <span class="checkbox__modified"></span>
+                                            Sign Up for Newsletter
+                                        </label>
+                                    </div>
+                                </section>
+                                <section class="create-account__newsletter">
+                                    <h2 class="create-account__title title-sm">Sign Up for Newsletter</h2>
+                                    <label class="create-account__label form__label">
+                                        Email *
+                                        <input class="create-account__input form__input" type="email"
+                                            placeholder="daisy.watson@example.com" required>
+                                    </label>
+                                    <label class="create-account__label form__label">
+                                        Password *
+                                        <input class="create-account__input form__input" type="password"
+                                            placeholder="Password" required>
+                                    </label>
+                                    <label class="create-account__label form__label">
+                                        Confirm Password *
+                                        <input class="create-account__input form__input" type="password"
+                                            placeholder="Password" required>
+                                    </label>
+                                </section>
+                                <div class="create-account__buttons">
+                                    <button class="create-account__btn btn btn--primary-2" type="submit">
+                                        create an account
+                                    </button>
+                                    <a class="create-account__link btn btn--secondary" href="/">
+                                        back
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            @@include('blocks/benefits.html')
+            <div class="overlay"></div>
+        </div>
+        @@include('blocks/footer.html')
+    </div>
+    <script src="./js/createAccount.bundle.js"></script>
+</body>
+
+</html>

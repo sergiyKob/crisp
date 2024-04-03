@@ -1,0 +1,66 @@
+.categories {
+    margin-bottom: 60px;
+
+    @include mq("tablet") {
+        margin-bottom: 30px;
+    }
+
+    &__inner {
+        display: flex;
+        gap: 10px;
+
+        @include mq("tablet") {
+            display: block;
+        }
+    }
+
+    &__sidebar {
+        flex-shrink: 0;
+        width: 20%;
+
+        @include mq("tablet") {
+            width: 100%;
+        }
+    }
+
+    &__cards {
+        padding-left: 30px;
+        border-left: 1px solid var(--silver-color);
+
+        @include mq("tablet") {
+            padding-left: 0;
+            border-left: none;
+        }
+    }
+
+    &__item {
+        &:nth-child(n + 9) {
+            display: none;
+        }
+
+        &.is-visible {
+            display: block;
+        }
+    }
+
+    &__title {
+        margin-bottom: 30px;
+
+        @include mq("tablet") {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__btn {
+        min-width: 140px;
+        background-color: transparent;
+
+        @include hover {
+            background-color: var(--light-blue-hover);
+        }
+
+        @include mq("tablet") {
+            width: 100%;
+        }
+    }
+}

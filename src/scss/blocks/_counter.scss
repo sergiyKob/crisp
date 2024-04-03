@@ -1,0 +1,48 @@
+.counter {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--silver-color);
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 40px;
+        transition:
+            background-color var(--transition),
+            opacity var(--transition);
+        &:focus {
+            box-shadow: 0 0 0 1px var(--black-color);
+        }
+
+        @include hover {
+            background-color: var(--light-blue-hover);
+            .counter__btn-icon {
+                fill: var(--gray1-color);
+            }
+        }
+        &:active {
+            opacity: 0.5;
+        }
+    }
+
+    &__btn-icon {
+        fill: var(--silver-color);
+        transition: fill var(--transition);
+    }
+
+    &__label {
+        margin: 0 2px;
+    }
+
+    &__input {
+        max-width: 30px;
+        height: 42px;
+        text-align: center;
+        &:focus {
+            box-shadow: 0 0 0 1px var(--black-color);
+        }
+    }
+}

@@ -1,0 +1,64 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.range-slider {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    padding-right: 24px;
+    text-transform: uppercase;
+    &__inputs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        @include mq("tablet") {
+            margin-bottom: 40px;
+        }
+    }
+    &__input {
+        width: 28px;
+        &::placeholder {
+            color: var(--black-color);
+        }
+        @include mq("tablet") {
+            background-color: var(--light-blue-color);
+        }
+    }
+}
+
+.range-slider .noUi-target {
+    background: var(--gray3-color);
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+.range-slider .noUi-connect {
+    background: var(--black-color);
+}
+.range-slider .noUi-horizontal {
+    height: 2px;
+}
+.range-slider .noUi-handle {
+    border: none;
+    border-radius: 0;
+    background: var(--black-color);
+    cursor: pointer;
+    box-shadow: none;
+    &::before,
+    &::after {
+        display: none;
+    }
+}
+.range-slider .noUi-horizontal .noUi-handle {
+    width: 6px;
+    height: 20px;
+    right: 0;
+    top: -9px;
+}

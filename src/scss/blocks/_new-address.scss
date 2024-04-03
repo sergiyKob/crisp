@@ -1,0 +1,16 @@
+.new-address {
+    &__title {
+        @include margin-bottom(30, 15);
+    }
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        @include margin-bottom(50, 30);
+    }
+    &__btn {
+        @include mq("mobile") {
+            width: 100%;
+        }
+    }
+}

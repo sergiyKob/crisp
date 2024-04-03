@@ -1,0 +1,39 @@
+.benefits {
+    margin-top: auto;
+    background-color: var(--main-color);
+    padding: 35px 0;
+    @include mq("tablet") {
+        padding: 20px 0;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 15px;
+        @include mq("mobile") {
+            justify-content: left;
+        }
+        @include mq("mobile") {
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-left: 40px;
+        font-size: 14px;
+        min-height: 30px;
+        &::before {
+            @include pseudo;
+            @include img-bg;
+            background-image: url("../img/check-mark.svg");
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+        }
+        @include mq("mobile") {
+            width: 100%;
+        }
+    }
+}

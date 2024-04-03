@@ -1,0 +1,98 @@
+.card {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px;
+    transition: box-shadow var(--transition);
+
+    @include hover {
+        box-shadow: 0 3px 15px var(--black-rgba-20);
+    }
+
+    &__img {
+        margin-bottom: 15px;
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--black-color);
+        }
+    }
+
+    &__categories {
+        @include adaptiv-font(12, 10);
+        display: inline-block;
+        color: var(--gray3-color);
+        font-weight: 600;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        transition: color var(--transition);
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--black-color);
+        }
+
+        @include hover {
+            color: var(--gray1-color)
+        }
+    }
+
+    &__title {
+        @include adaptiv-font(18, 14);
+        max-width: 344px;
+        font-weight: 300;
+        transition: var(--transition);
+    }
+
+    &__link {
+        @include line-clamp(2);
+        margin-bottom: 15px;
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--black-color);
+        }
+
+        @include hover {
+            color: var(--accent-color);
+        }
+    }
+
+    &__price {
+        @include adaptiv-font(22, 14);
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        line-height: 1;
+        font-weight: 500;
+        margin-top: auto;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+    }
+
+    &__price-old {
+        color: var(--gray3-color);
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: line-through;
+
+        @include mq("mobile") {
+            font-size: 10px;
+        }
+    }
+
+    &__price-new {
+        color: var(--accent-color);
+    }
+
+    &__label {
+        display: inline-block;
+        background-color: var(--black-color);
+        color: var(--light-color);
+        font-size: 14px;
+        line-height: 1;
+        padding: 3px 4px;
+        position: absolute;
+        left: 5px;
+        top: 15px;
+    }
+}

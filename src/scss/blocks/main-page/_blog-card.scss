@@ -1,0 +1,99 @@
+.blog-card {
+    height: 100%;
+    background-color: var(--light-color);
+    transition: box-shadow var(--transition);
+    @include padding(24, 15);
+
+    @include hover {
+        box-shadow: 0 3px 15px var(--black-rgba-10);
+    }
+
+    &__link {
+        text-decoration: none;
+        background: linear-gradient(var(--black-color), var(--black-color)) no-repeat;
+        background-size: 100% 0px;
+        background-position: 0 36px;
+        transition: background-size var(--transition);
+
+        @include hover {
+            background-size: 100% 1px;
+        }
+    }
+
+    &__inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        @include adaptiv-font(18, 12);
+        @include margin-bottom(20, 10);
+        color: var(--gray3-color);
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        @include adaptiv-font(26, 18);
+        @include margin-bottom(32, 14);
+        @include line-clamp(2);
+        font-weight: inherit;
+    }
+
+    &__text {
+        @include adaptiv-font(16, 14);
+        @include line-clamp(5);
+        font-family: "Roboto", sans-serif;
+        line-height: 1.5;
+        margin-bottom: 25px;
+        letter-spacing: 0.16px;
+    }
+
+    &__bottom {
+        color: var(--gray2-color);
+        border-top: 3px solid var(--black-color);
+        font-size: 14px;
+        font-weight: 300;
+        padding-top: 12px;
+        margin-top: auto;
+
+        @include mq("tablet") {
+            border-top: 2px solid var(--black-color);
+            font-size: 12px;
+        }
+    }
+
+    &__date {
+        margin-right: 10px;
+    }
+
+    &__author {
+        position: relative;
+
+        &::after {
+            @include pseudo;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--gray2-color);
+            transition: opacity var(--transition);
+            opacity: 0;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 2px var(--black-color);
+        }
+
+        @include hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
+    }
+}

@@ -1,0 +1,97 @@
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <button class="burger" type="button">
+                <span class="burger__line"></span>
+                <span class="sr-only">burger menu</span>
+            </button>
+            <a class="header__logo logo" href="#">
+                <img class="logo__img" src="img/logo.svg" width="94" height="44" alt="logo">
+            </a>
+            <div class="header__center">
+                <div class="btns-mobile full-width">
+                    <a class="btns-mobile__btn btn btn--secondary" href="/create-account.html">
+                        create an account
+                    </a>
+                    <button class="btns-mobile__btn btn btn--secondary btn--sign-in" type="button"
+                            data-popup-btn="popup-1">
+                        sign in
+                    </button>
+                </div>
+                <nav class="header__menu menu">
+                    <ul class="menu__list">
+                        <li class="menu__item">
+                            <a class="menu__link link" href="/">home</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link link" href="/catalog.html">shop</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link link" href="/article.html">blog</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link link" href="#">sale</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link link" href="#">contacts us</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__search">
+                    <button class="header__search-btn link" type="button" data-popup-btn="popup-search">
+                        <svg class="header__icon" width="16" height="16">
+                            <use xlink:href="img/sprite.svg#icon-search"></use>
+                        </svg>
+                        search
+                    </button>
+                    <form id="popup-search" class="form-search" data-popup>
+                        <div class="form-search__inner">
+                            <label class="form-search__label">
+                                <svg class="form-search__icon" width="24" height="24">
+                                    <use xlink:href="img/sprite.svg#icon-search"></use>
+                                </svg>
+                                <input class="form-search__input" type="search"
+                                       placeholder="Angels malu zip jeans slim black" required>
+                            </label>
+                            <button class="form-search__btn btn btn--secondary" type="submit">
+                                find
+                            </button>
+                            <button class="form-search__close popup__close" type="button" data-popup-close>
+                                <svg class="popup__close-icon" width="20" height="20">
+                                    <use xlink:href="img/sprite.svg#icon-close"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <div class="header__right">
+                <div class="header__user-account">
+                    <button class="header__btn link" type="button" data-popup-btn="popup-1">sign in</button>
+                    <a class="header__btn link" href="/create-account.html">create an account</a>
+                </div>
+                <a class="header__wishlist link" href="/wishlist.html" title="wishlist">
+                    <svg class="header__icon" width="20" height="18" aria-hidden="true" aria-label="go to wishlist">
+                        <use xlink:href="img/sprite.svg#icon-heart"></use>
+                    </svg>
+                </a>
+                <button class="header__cart link" type="button" title="cart" data-popup-btn="popup-2">
+                    <svg class="header__cart-icon" width="18" height="20" aria-hidden="true" aria-label="go to cart">
+                        <use xlink:href="img/sprite.svg#icon-cart"></use>
+                    </svg>
+                    <span class="header__cart-qty">
+                        <span>0</span>
+                        <span class="header__cart-text">item(s)</span>
+                    </span>
+                    <span class="header__cart-price">
+                        <span>0</span>
+                        eur
+                    </span>
+                </button>
+            </div>
+        </div>
+        @@include('../blocks/sign-in.html')
+        @@include('../blocks/mini-cart.html')
+    </div>
+</header>

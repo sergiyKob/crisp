@@ -1,0 +1,28 @@
+.contacts {
+    &__item {
+        font-family: "Oswald", sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+    &__link {
+        font-family: "Roboto", sans-serif;
+        display: block;
+        color: var(--gray1-color);
+        margin-top: 5px;
+        @include mq("desktop-lg") {
+        }
+        @include mq("desktop") {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        @include mq("tablet") {
+        }
+        @include mq("tablet-sm") {
+        }
+        @include mq("mobile") {
+        }
+    }
+}

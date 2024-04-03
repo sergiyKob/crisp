@@ -1,0 +1,77 @@
+.catalog {
+    margin-bottom: 40px;
+
+    &__inner {
+        position: relative;
+        display: flex;
+        gap: 30px;
+        padding-top: 20px;
+
+        @include mq("tablet") {
+            gap: 15px;
+            padding-top: 0;
+        }
+    }
+
+    &__sidebar {
+        max-width: 400px;
+        padding-right: 16px;
+        border-right: 1px solid var(--silver-color);
+
+        @include mq("desktop") {
+            max-width: 300px;
+        }
+
+        @include mq("tablet") {
+            padding-right: 0;
+            padding: 15px;
+            border-right: none;
+            display: none;
+            background-color: var(--light-blue-hover);
+            position: absolute;
+            left: 0;
+            top: 70px;
+            right: 0;
+            max-width: 100%;
+            z-index: 99;
+
+            &.is-open {
+                display: block;
+            }
+        }
+    }
+
+    &__sort {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+
+        @include mq("tablet-sm") {
+            gap: 10px;
+        }
+    }
+
+    &__sort-item-1 {
+        width: 255px;
+        margin-left: auto;
+
+        @include mq("tablet") {
+            width: 50%;
+            margin-left: 0;
+        }
+
+        @include mq("mobile") {
+            .choices__inner {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__sort-item-2 {
+        width: 70px;
+
+        @include mq("tablet") {
+            width: 50%;
+        }
+    }
+}

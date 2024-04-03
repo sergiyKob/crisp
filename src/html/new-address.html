@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('blocks/head.html', {
+"pageTitle": "New Address"
+})
+
+<body class="body">
+     <div class="wrapper">
+          @@include('blocks/header.html')
+          <div class="main">
+               <section class="profile">
+                    <div class="container-middle">
+                         <div class="profile__breadcrumbs">
+                              <nav class="breadcrumbs flex-jcc">
+                                   <ul class="breadcrumbs__list">
+                                        <li class="breadcrumbs__item">
+                                             <a class="breadcrumbs__link" href="/">Home</a>
+                                        </li>
+                                        <li class="breadcrumbs__item">
+                                             <a class="breadcrumbs__link breadcrumbs__link--current">Create New Customer
+                                                  Account</a>
+                                        </li>
+                                   </ul>
+                              </nav>
+                         </div>
+                         <button class="filter-mobile-btn dashboard-menu-btn">
+                              Address Book
+                              <svg class="filter-mobile-btn__icon" width="19" height="11">
+                                   <use xlink:href="img/sprite.svg#arrow-down"></use>
+                              </svg>
+                         </button>
+                         <h1 class="profile__title">
+                              Add New Address
+                         </h1>
+                         <div class="profile__body">
+                              <div class="dashboard">
+                                   <div class="dashboard__inner">
+                                        <aside class="dashboard__sidebar">
+                                             <nav class="dashboard-nav">
+                                                  <ul class="dashboard-nav__list">
+                                                       <li class="dashboard-nav__item">
+                                                            <a class="dashboard-nav__link" href="/dashboard.html">
+                                                                 Account Dashboard
+                                                            </a>
+                                                       </li>
+                                                       <li class="dashboard-nav__item">
+                                                            <a class="dashboard-nav__link" href="/edit-account.html">
+                                                                 Account Information
+                                                            </a>
+                                                       </li>
+                                                       <li class="dashboard-nav__item">
+                                                            <a class="dashboard-nav__link dashboard-nav__link--active">
+                                                                 Address Book
+                                                            </a>
+                                                       </li>
+                                                       <li class="dashboard-nav__item">
+                                                            <a class="dashboard-nav__link" href="#">
+                                                                 My Orders
+                                                            </a>
+                                                       </li>
+                                                       <li class="dashboard-nav__item">
+                                                            <a class="dashboard-nav__link" href="/wishlist.html">
+                                                                 My Wishlist
+                                                            </a>
+                                                       </li>
+                                                       <li class="dashboard-nav__item">
+                                                            <a class="dashboard-nav__link" href="#">
+                                                                 Newsletter
+                                                                 Subscriptions
+                                                            </a>
+                                                       </li>
+                                                  </ul>
+                                             </nav>
+                                        </aside>
+                                        <div class="dashboard__body">
+                                             <form class="new-address form">
+                                                  <div class="new-address__row">
+                                                       <h2 class="new-address__title title-sm">Contact Information</h2>
+                                                       <label class="form__label">
+                                                            First name *
+                                                            <input class="form__input" type="text" placeholder="Alex"
+                                                                 required>
+                                                       </label>
+                                                       <label class="form__label">
+                                                            Last Name *
+                                                            <input class="form__input" type="text" placeholder="Driver"
+                                                                 required>
+                                                       </label>
+                                                       <label class="form__label">
+                                                            Company
+                                                            <input class="form__input" type="text">
+                                                       </label>
+                                                       <label class="form__label">
+                                                            Phone Number *
+                                                            <input class="form__input" type="tel" required>
+                                                       </label>
+                                                       <label class="form__label">
+                                                            Fax
+                                                            <input class="form__input" type="tel">
+                                                       </label>
+                                                  </div>
+                                                  <div class="new-address__row">
+                                                       <h2 class="new-address__title title-sm">Address</h2>
+                                                       <label class="form__label">
+                                                            Street Address *
+                                                            <input class="form__input" type="text" required>
+                                                       </label>
+                                                       <label class="form__label jc-flex-end">
+                                                            <input class="form__input" type="text">
+                                                       </label>
+                                                       <label class=" form__label">
+                                                            Country *
+                                                            <div class="form__select-wrap">
+                                                                 <select
+                                                                      class="form__select multi-default choices__input">
+                                                                      <option value="" disabled selected>Please select
+                                                                           your country
+                                                                      </option>
+                                                                      <option value="">USA</option>
+                                                                      <option value="">Canada</option>
+                                                                      <option value="">Mexico</option>
+                                                                 </select>
+                                                            </div>
+                                                       </label>
+                                                       <label class=" form__label">
+                                                            State/Province *
+                                                            <div class="form__select-wrap">
+                                                                 <select
+                                                                      class="form__select multi-default choices__input">
+                                                                      <option value="" disabled selected>
+                                                                           Please select a region, state or province.
+                                                                      </option>
+                                                                      <option value="">California</option>
+                                                                      <option value="">Washington</option>
+                                                                      <option value="">New York</option>
+                                                                 </select>
+                                                            </div>
+                                                       </label>
+                                                       <label class="form__label">
+                                                            Zip/Postal Code *
+                                                            <input class="form__input" type="number" required>
+                                                       </label>
+                                                  </div>
+                                                  <button class="new-address__btn btn btn--primary-2" type="submit">Save
+                                                       Adress</button>
+                                             </form>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </section>
+               @@include('blocks/benefits.html')
+               <div class="overlay"></div>
+          </div>
+          @@include('blocks/footer.html')
+     </div>
+     <script src="./js/newAddress.bundle.js"></script>
+</body>
+
+</html>
